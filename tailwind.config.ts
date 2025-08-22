@@ -18,15 +18,23 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'heading': ['Space Grotesk', 'system-ui', 'sans-serif'],
+				'body': ['Inter', 'system-ui', 'sans-serif'],
+				'hand': ['Space Grotesk', 'cursive'],
+				'mono': ['JetBrains Mono', 'Courier New', 'monospace'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				'text-light': 'hsl(var(--text-light))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -63,6 +71,16 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-secondary': 'var(--gradient-secondary)',
+				'gradient-subtle': 'var(--gradient-subtle)',
+			},
+			boxShadow: {
+				'elegant': 'var(--shadow-elegant)',
+				'glow': 'var(--shadow-glow)',
+				'card': 'var(--shadow-card)',
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -84,11 +102,35 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-glow': {
+					'0%, 100%': { 
+						opacity: '0.6',
+						transform: 'scale(1)' 
+					},
+					'50%': { 
+						opacity: '1',
+						transform: 'scale(1.02)' 
+					}
+				},
+				'hand-draw': {
+					'0%': { 
+						'stroke-dashoffset': '100%' 
+					},
+					'100%': { 
+						'stroke-dashoffset': '0%' 
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+				'hand-draw': 'hand-draw 2s ease-in-out infinite'
+			},
+			transitionTimingFunction: {
+				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
+				'spring': 'cubic-bezier(0.34, 1.56, 0.64, 1)'
 			}
 		}
 	},
