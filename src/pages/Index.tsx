@@ -38,11 +38,11 @@ const Index = () => {
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
         {/* Background Waveform */}
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-20">
           <img 
             src={emotionWaveformBg} 
             alt="" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover mix-blend-multiply"
           />
         </div>
         
@@ -54,9 +54,9 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="font-heading text-4xl md:text-6xl text-primary mb-6 leading-tight">
+            <h1 className="font-heading text-4xl md:text-6xl text-primary mb-8 leading-tight">
               From Systems That Save Lives
-              <span className="block text-secondary mt-2">
+              <span className="block text-secondary mt-2 font-normal italic">
                 To Systems That Understand Lives
               </span>
             </h1>
@@ -68,7 +68,7 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <p className="text-xl md:text-2xl text-text-light mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-text-light mb-8 max-w-2xl mx-auto leading-relaxed">
               15 years building technology that couldn't fail.<br />
               Now building technology that can feel.
             </p>
@@ -88,33 +88,34 @@ const Index = () => {
             />
           </motion.div>
 
-          {/* Interactive Demo Teaser */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
-            className="mb-12"
-          >
-            <div className="max-w-md mx-auto bg-card/50 backdrop-blur-sm rounded-xl p-6 border border-border/50">
-              <div className="h-16 bg-gradient-to-r from-primary/20 to-accent/20 rounded-lg flex items-center justify-center mb-4">
-                <div className="w-2 h-2 bg-primary rounded-full animate-pulse mr-2"></div>
-                <span className="font-mono text-sm text-text-light">Real-time emotion waveform</span>
-              </div>
-              <p className="text-sm text-text-light">
-                Move your mouse to see emotion AI in action →
-              </p>
-            </div>
-          </motion.div>
-
           {/* CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            className="mb-8"
           >
             <Link to="/story" className="cta-button">
-              Explore the Journey →
+              From Code to Feelings →
             </Link>
+          </motion.div>
+
+          {/* Interactive Demo Teaser */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+            className="mb-12"
+          >
+            <div className="max-w-sm mx-auto bg-card/40 backdrop-blur-sm rounded-lg p-4 border border-border/30">
+              <div className="h-12 bg-gradient-to-r from-primary/20 to-accent/20 rounded-md flex items-center justify-center mb-3">
+                <div className="w-2 h-2 bg-primary rounded-full animate-pulse mr-2"></div>
+                <span className="font-mono text-xs text-text-light">Real-time emotion waveform</span>
+              </div>
+              <p className="text-xs text-text-light text-center">
+                Move your mouse to see emotion AI in action →
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
