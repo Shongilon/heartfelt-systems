@@ -168,6 +168,18 @@ const Story = () => {
                 personally urgent. I want to bring 15 years of systems engineering to her vision 
                 of technology that enhances human connection rather than replacing it.
               </p>
+              
+              {/* Contextual link */}
+              <div className="mt-6 text-sm text-text-light">
+                <a 
+                  href="https://www.linkedin.com/in/itai-katz-esa/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-link"
+                >
+                  See my professional journey
+                </a> from defense systems to emotion AI research.
+              </div>
             </div>
             
             {/* Hand-drawn annotation */}

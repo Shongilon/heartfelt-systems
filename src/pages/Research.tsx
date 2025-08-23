@@ -133,6 +133,23 @@ const Research = () => {
                   <div className="text-lg">🔒</div>
                   <span>All processing happens locally - your voice never leaves your device</span>
                 </div>
+
+                {/* Demo Actions */}
+                <div className="flex justify-between items-center mt-6 pt-4 border-t border-border/30">
+                  <div className="text-sm text-text-light">
+                    <span className="text-lg mr-2">🔒</span>
+                    All processing happens locally
+                  </div>
+                  
+                  <a 
+                    href="https://github.com/Shongilon" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="code-link text-sm text-secondary hover:text-primary"
+                  >
+                    View technical implementation →
+                  </a>
+                </div>
               </div>
             </div>
           </div>
