@@ -155,18 +155,19 @@ const Story = () => {
         >
           <div className="max-w-4xl mx-auto">
             <h3 className="font-heading text-3xl text-primary mb-8">
-              Why MIT Media Lab?
+              My Turning Point
             </h3>
             <div className="space-y-6 text-lg leading-relaxed">
               <p>
-                I first encountered Rosalind Picard's autism communication research when my cousin 
-                was diagnosed at 8. Watching him struggle to express emotions while being incredibly 
-                intelligent made me realize: we're building AI that talks, but not AI that truly communicates.
+                When my cousin was diagnosed with autism at 8, I watched him struggle to express emotions 
+                while being incredibly intelligent. This moment made me realize: we're building AI that talks, 
+                but not AI that truly communicates.
               </p>
               <p>
-                Picard's work on emotion-aware technology isn't just academically fascinating—it's 
-                personally urgent. I want to bring 15 years of systems engineering to her vision 
-                of technology that enhances human connection rather than replacing it.
+                Emotion-aware technology isn't just an academic curiosity—it's personally urgent. After 15 years 
+                in systems engineering, I've learned that the real frontier isn't making machines faster or more reliable, 
+                but making them truly understand us. My work now focuses on building technology that enhances human 
+                connection rather than replacing it.
               </p>
               
               {/* Contextual link */}
