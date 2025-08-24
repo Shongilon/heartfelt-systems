@@ -192,6 +192,45 @@ const Story = () => {
             </div>
           </div>
         </motion.section>
+
+        {/* Personal Profile Section */}
+        <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="py-20 mt-20 bg-primary/5 rounded-3xl px-8"
+        >
+          <div className="container max-w-4xl mx-auto">
+            <h3 className="font-heading text-3xl text-primary mb-8 text-center">Who I Am</h3>
+            
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="profile-content">
+                <p className="text-lg mb-6 leading-relaxed">
+                  I'm a 50-year-old father and technologist from Tel Aviv, driven by the belief that 
+                  the most sophisticated AI means nothing if it doesn't understand human vulnerability.
+                </p>
+                
+                <p className="text-lg leading-relaxed">
+                  My journey from defense systems to emotion AI isn't a career change—it's the logical 
+                  evolution of someone who's spent 15 years learning that reliable technology must serve 
+                  real human needs.
+                </p>
+              </div>
+              
+              <div className="what-drives-me">
+                <h4 className="font-heading text-xl text-secondary mb-4">What Drives Me</h4>
+                <p className="mb-4 leading-relaxed">
+                  Personal experiences with family members facing ALS and autism showed me how emotion 
+                  recognition could transform assistive technology.
+                </p>
+                <p className="leading-relaxed">
+                  I want to bring systems engineering rigor to the deeply human challenge of building 
+                  AI that truly understands us.
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.section>
       </div>
     </div>
   );
