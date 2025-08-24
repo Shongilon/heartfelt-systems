@@ -206,11 +206,11 @@ const Story = () => {
             
             <div className="grid md:grid-cols-2 gap-12">
               <div className="profile-content">
-                <p className="text-lg mb-6">I'm a systems engineer who spent 15+ years building technology that couldn't fail—from fighter jet navigation to augmented reality platforms. Now I build technology that helps people feel.</p>
+                <p className="text-lg mb-6">I'm a systems engineer who spent 15+ years building technology for extreme reliability—from navigation systems to augmented reality platforms. Now I explore what happens when that same rigor meets human emotion.</p>
                 
-                <p className="text-lg mb-6">As <strong>CTO at REACTU.io</strong>, I'm pioneering the first systems that translate physiological signals into emotional expression for people who can think and feel but cannot communicate.</p>
+                <p className="text-lg mb-6">As <strong>CTO at REACTU.io</strong>, I'm exploring how physiological signals might become a new alphabet of human expression—helping people communicate emotions when words fail.</p>
                 
-                <p className="text-lg">I've learned that the same engineering rigor that keeps aircraft systems reliable can create <strong>clinical-grade emotion AI</strong> that restores human connection when words fail.</p>
+                <p className="text-lg">What if technology could let emotions travel without words? I believe the engineering discipline that creates unbreakable systems can also create <strong>technology that truly understands us</strong>.</p>
               </div>
               
               <div className="research-interests">
@@ -253,8 +253,8 @@ const Story = () => {
                 </div>
                 
                 <div className="stat-item">
-                  <span className="text-3xl font-heading text-secondary">$5B+</span>
-                  <p className="text-sm text-text-light">Untapped market in emotion-enabled communication</p>
+                  <span className="text-3xl font-heading text-secondary">Vast Need</span>
+                  <p className="text-sm text-text-light">Unmet need in human expression technology</p>
                 </div>
               </div>
               
@@ -281,13 +281,13 @@ const Story = () => {
                 
                 <div className="foundation-item">
                   <h5 className="font-heading text-base text-primary mb-2">Systems Expertise</h5>
-                  <p className="text-text-light">High-reliability deployment, regulatory compliance (DO-178C), embedded systems architecture</p>
+                  <p className="text-text-light">Exploring multimodal signals as a new alphabet of human expression, real-time emotion processing architectures</p>
                 </div>
               </div>
               
               <div className="career-timeline mt-8 text-center">
                 <div className="timeline-flow text-xs text-text-light">
-                  <strong>Rafael</strong> (Image Processing) → <strong>Elbit</strong> (Spatial Computing) → <strong>NVIDIA</strong> (AI Manufacturing) → <strong>REACTU.io</strong> (Emotion AI)
+                  <strong>High-Reliability Systems</strong> → <strong>Spatial Computing</strong> → <strong>AI Manufacturing</strong> → <strong>Emotion AI Research</strong>
                 </div>
               </div>
             </div>
