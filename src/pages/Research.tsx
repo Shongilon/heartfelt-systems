@@ -1,309 +1,431 @@
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
+import { motion } from "framer-motion";
 
 const Research = () => {
-  const [isRecording, setIsRecording] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState('en');
-  const [expandedProject, setExpandedProject] = useState<string | null>(null);
-
-  const startDemo = () => {
-    setIsRecording(true);
-    // Simulate recording for demo
-    setTimeout(() => setIsRecording(false), 5000);
-  };
-
-  const projects = [
-    {
-      id: 'adaptive-interfaces',
-      title: 'Adaptive Interfaces for Extreme Environments',
-      description: 'When humans are under extreme stress, traditional interfaces become cognitive barriers.',
-      impact: 'I built the first large-scale system that got smarter when humans got stressed.',
-      metrics: ['40% faster completion', '60% improved satisfaction', 'Zero safety incidents'],
-      details: [
-        'Discovered operators were ignoring critical safety information because the system didn\'t adapt to their emotional state.',
-        'The solution: Real-time emotion recognition that simplified interfaces when users were overwhelmed.',
-        'Deployed in high-stress operational environments with measurable impact on human performance.'
-      ]
-    },
-    {
-      id: 'reactu-platform',
-      title: 'REACTU.io Healthcare Platform',
-      description: 'Healthcare data lives in silos. Emotion data doesn\'t exist at all.',
-      impact: 'I built the infrastructure that makes emotion AI research possible in real healthcare settings.',
-      metrics: ['10,000+ Users', 'Clinical-grade privacy', 'HIPAA compliant'],
-      details: [
-        'Created the first platform to safely process emotion signals in healthcare environments.',
-        'Built privacy-first architecture that enables research without compromising patient data.',
-        'Enables researchers to study emotion patterns in real clinical settings for the first time.'
-      ]
-    }
-  ];
-
   return (
-    <div className="min-h-screen py-20">
-      <div className="container mx-auto max-w-7xl">
-        {/* EmotiVoice Hero Project */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mb-20"
-        >
-          {/* Project Header */}
-          <div className="text-center mb-16">
-            <h1 className="font-heading text-5xl text-primary mb-4">EmotiVoice</h1>
-            <p className="text-xl text-text-light">
-              AI that learns your unique emotional voice
-            </p>
-          </div>
-
-          {/* Interactive Demo */}
-          <div className="max-w-4xl mx-auto mb-16">
-            <div className="bg-card border-2 border-border rounded-3xl p-8 shadow-card">
-              {/* Voice Input Interface */}
-              <div className="mb-8">
-                <div className="flex flex-col md:flex-row items-center gap-6 mb-6">
-                  <Button
-                    onClick={startDemo}
-                    disabled={isRecording}
-                    className={`px-8 py-4 font-heading text-lg transition-all duration-300 ${
-                      isRecording 
-                        ? 'bg-secondary hover:bg-secondary' 
-                        : 'bg-primary hover:bg-primary/90'
-                    }`}
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className={`w-4 h-4 rounded-full ${
-                        isRecording ? 'bg-primary-foreground animate-pulse' : 'bg-primary-foreground'
-                      }`} />
-                      {isRecording ? 'Recording...' : 'Speak for 10 seconds'}
-                    </div>
-                  </Button>
-
-                  {/* Language Selector */}
-                  <div className="flex gap-2">
-                    {[
-                      { code: 'en', label: 'English' },
-                      { code: 'he', label: 'עברית' },
-                      { code: 'ar', label: 'العربية' }
-                    ].map((lang) => (
-                      <button
-                        key={lang.code}
-                        onClick={() => setSelectedLanguage(lang.code)}
-                        className={`px-4 py-2 rounded-lg transition-colors ${
-                          selectedLanguage === lang.code
-                            ? 'bg-primary text-primary-foreground'
-                            : 'bg-muted text-muted-foreground hover:bg-muted/80'
-                        }`}
-                      >
-                        {lang.label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Real-time Visualization */}
-                <div className="bg-background rounded-xl p-6 mb-6">
-                  <div className="h-32 bg-gradient-to-r from-primary/20 to-accent/20 rounded-lg flex items-center justify-center">
-                    <div className="text-text-light font-mono">
-                      {isRecording ? 'Processing audio waveform...' : 'Waveform visualization area'}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Results Display */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                  {['Happiness', 'Sadness', 'Anger', 'Fear'].map((emotion) => (
-                    <div key={emotion} className="bg-muted rounded-lg p-4">
-                      <div className="text-sm text-muted-foreground mb-2">{emotion}</div>
-                      <div className="w-full bg-background rounded-full h-2">
-                        <div 
-                          className="bg-primary h-2 rounded-full transition-all duration-500"
-                          style={{ 
-                            width: isRecording ? `${Math.random() * 100}%` : '0%'
-                          }}
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Privacy Badge */}
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <div className="text-lg">🔒</div>
-                  <span>All processing happens locally - your voice never leaves your device</span>
-                </div>
-
-                {/* Demo Actions */}
-                <div className="flex justify-between items-center mt-6 pt-4 border-t border-border/30">
-                  <div className="text-sm text-text-light">
-                    <span className="text-lg mr-2">🔒</span>
-                    All processing happens locally
-                  </div>
-                  
-                  <a 
-                    href="https://github.com/Shongilon" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="code-link text-sm text-secondary hover:text-primary"
-                  >
-                    View technical implementation →
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Story Section */}
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              className="cursor-pointer"
-              onClick={() => setExpandedProject(
-                expandedProject === 'emotivoice-story' ? null : 'emotivoice-story'
-              )}
-            >
-              <div className="flex items-center gap-4 mb-8">
-                <h3 className="font-heading text-2xl text-primary">
-                  The Story Behind EmotiVoice
-                </h3>
-                <span className="text-2xl transition-transform duration-300">
-                  {expandedProject === 'emotivoice-story' ? '−' : '+'}
-                </span>
-              </div>
-            </motion.div>
-            
-            <motion.div
-              initial={false}
-              animate={{
-                height: expandedProject === 'emotivoice-story' ? 'auto' : 0,
-                opacity: expandedProject === 'emotivoice-story' ? 1 : 0
-              }}
-              className="overflow-hidden"
-            >
-              <div className="grid md:grid-cols-4 gap-8 bg-muted/30 rounded-2xl p-8">
-                {[
-                  {
-                    title: 'The Challenge',
-                    content: 'Sarah has ALS. Her voice changes daily, but her feelings don\'t.'
-                  },
-                  {
-                    title: 'The Messy Middle',
-                    content: 'Academic emotion AI works in labs. Real patients need something that works at 3am.'
-                  },
-                  {
-                    title: 'What I Built',
-                    content: 'AI that learns your unique emotional voice, adapts in real-time, never sends data to the cloud.'
-                  },
-                  {
-                    title: 'What It Means',
-                    content: '"For the first time, my computer understood when I was frustrated with it." —Beta tester'
-                  }
-                ].map((step, index) => (
-                  <div key={index} className="text-center">
-                    <h4 className="font-heading text-lg text-secondary mb-4">
-                      {step.title}
-                    </h4>
-                    <p className="text-foreground/80">
-                      {step.content}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Impact Metrics */}
-            <div className="grid md:grid-cols-3 gap-8 mt-16">
-              <div className="text-center">
-                <div className="text-4xl font-heading text-primary mb-2">89%</div>
-                <div className="text-text-light">Accuracy across languages</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-heading text-primary mb-2">12</div>
-                <div className="text-text-light">Families testing in beta</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-heading text-primary mb-2">0</div>
-                <div className="text-text-light">Privacy incidents</div>
-              </div>
-            </div>
-          </div>
-        </motion.section>
-
-        {/* Other Projects */}
-        <div className="space-y-20">
-          {projects.map((project, index) => (
-            <motion.section
-              key={project.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className={`py-20 ${index % 2 === 0 ? 'bg-background' : ''}`}
-            >
-              <div className={`grid md:grid-cols-2 gap-12 items-center ${
-                index % 2 === 0 ? '' : 'md:grid-flow-col-dense'
-              }`}>
-                {/* Visual Placeholder */}
-                <div className={index % 2 === 0 ? '' : 'md:col-start-2'}>
-                  <div className="aspect-video bg-gradient-secondary rounded-2xl flex items-center justify-center">
-                    <span className="text-white/80 font-mono">
-                      Technical Architecture Visualization
-                    </span>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className={index % 2 === 0 ? '' : 'md:col-start-1'}>
-                  <h3 className="font-heading text-3xl text-primary mb-6">
-                    {project.title}
-                  </h3>
-                  <div className="space-y-4 mb-8">
-                    <p className="text-lg">{project.description}</p>
-                    <p className="text-lg font-medium text-secondary">
-                      {project.impact}
-                    </p>
-                  </div>
-
-                  {/* Expandable Details */}
-                  <button
-                    onClick={() => setExpandedProject(
-                      expandedProject === project.id ? null : project.id
-                    )}
-                    className="text-primary hover:text-primary/80 font-medium transition-colors mb-6"
-                  >
-                    {expandedProject === project.id ? 'Hide details' : 'See the full story'} →
-                  </button>
-
-                  <motion.div
-                    initial={false}
-                    animate={{
-                      height: expandedProject === project.id ? 'auto' : 0,
-                      opacity: expandedProject === project.id ? 1 : 0
-                    }}
-                    className="overflow-hidden"
-                  >
-                    <div className="space-y-4 mb-8">
-                      {project.details.map((detail, i) => (
-                        <p key={i} className="text-foreground/80">
-                          {detail}
-                        </p>
-                      ))}
-                    </div>
-                  </motion.div>
-
-                  {/* Impact Numbers */}
-                  <div className="flex flex-wrap gap-6">
-                    {project.metrics.map((metric, i) => (
-                      <div key={i} className="px-4 py-2 bg-accent/10 rounded-lg">
-                        <span className="font-medium text-accent">{metric}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </motion.section>
-          ))}
+    <div className="research-page">
+      {/* Research Hero */}
+      <section className="research-hero py-20">
+        <div className="container text-center">
+          <h1 className="font-heading text-5xl text-primary mb-6">Research & Technical Innovation</h1>
+          <p className="text-xl text-text-light max-w-3xl mx-auto">
+            Advancing multisensory AI, responsive sensing environments, and human-centered robotics through 
+            15+ years of mission-critical systems development and breakthrough emotion recognition technology.
+          </p>
         </div>
-      </div>
+      </section>
+
+      {/* Project 1: REACTU.io - Primary Research Focus */}
+      <section className="project-section py-20">
+        <div className="container">
+          <div className="project-header mb-16">
+            <div className="flex items-center justify-between mb-8">
+              <div>
+                <h2 className="font-heading text-4xl text-primary mb-4">REACTU.io: Physiological Emotion AI Platform</h2>
+                <p className="text-xl text-secondary">CTO & Lead AI Engineer • 2023-Present</p>
+              </div>
+              <div className="project-links">
+                <a href="#" className="tech-link text-accent hover:text-accent/80 transition-colors">View Technical Implementation →</a>
+              </div>
+            </div>
+            
+            <div className="project-tagline bg-accent/10 p-6 rounded-xl mb-12">
+              <h3 className="font-heading text-2xl text-accent mb-3">"AI That Feels You"</h3>
+              <p className="text-lg">Breakthrough technology translating physiological signals into real-time emotional expression for 20+ million people with preserved cognition but communication barriers—starting with ALS patients, locked-in syndrome, and severe stroke survivors.</p>
+            </div>
+          </div>
+
+          {/* Technical Architecture */}
+          <div className="technical-architecture mb-16">
+            <h3 className="font-heading text-2xl text-primary mb-8">Multimodal Signal Processing Architecture</h3>
+            
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="architecture-details">
+                <h4 className="font-heading text-xl text-secondary mb-4">Core Technical Innovation</h4>
+                
+                <div className="tech-stack mb-6">
+                  <h5 className="font-heading text-lg mb-3">Neural Network Pipeline</h5>
+                  <ul className="tech-list space-y-2">
+                    <li><strong>PyTorch Framework:</strong> Custom transformer architectures for time-series emotion classification</li>
+                    <li><strong>Real-Time Processing:</strong> Edge-deployed models with &lt;200ms latency for clinical applications</li>
+                    <li><strong>Multimodal Fusion:</strong> Biosensor integration (GSR, EMG, ECG, IMU) with advanced feature extraction</li>
+                    <li><strong>Federated Learning:</strong> Privacy-preserving model updates across distributed patient populations</li>
+                  </ul>
+                </div>
+                
+                <div className="research-contributions mb-6">
+                  <h5 className="font-heading text-lg mb-3">Research Contributions</h5>
+                  <ul className="contribution-list space-y-2">
+                    <li>• Novel cross-cultural emotion recognition algorithms (Hebrew, English, Arabic validation)</li>
+                    <li>• First clinical-grade emotion AI system for neurological communication disorders</li>
+                    <li>• Privacy-first architecture meeting HIPAA and medical device compliance standards</li>
+                    <li>• Adaptive personalization algorithms learning individual emotional expression patterns</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="system-diagram">
+                {/* Hand-drawn system architecture */}
+                <div className="diagram-placeholder bg-background border-2 border-border rounded-xl p-8">
+                  <h5 className="font-heading text-lg text-center mb-6">Real-Time Emotion Recognition Pipeline</h5>
+                  <div className="pipeline-flow">
+                    <div className="flow-step mb-4 p-4 bg-primary/10 rounded">
+                      <strong>Input Layer:</strong> Multi-sensor physiological data acquisition
+                    </div>
+                    <div className="flow-step mb-4 p-4 bg-secondary/10 rounded">
+                      <strong>Processing:</strong> Real-time feature extraction & neural classification
+                    </div>
+                    <div className="flow-step mb-4 p-4 bg-accent/10 rounded">
+                      <strong>Output:</strong> Emotional state recognition with confidence scores
+                    </div>
+                  </div>
+                  <p className="text-sm text-text-light text-center mt-4">All processing occurs locally - zero cloud dependency</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Research Impact & Validation */}
+          <div className="research-impact mb-16">
+            <h3 className="font-heading text-2xl text-primary mb-8">Clinical Research & Validation</h3>
+            
+            <div className="grid md:grid-cols-4 gap-6">
+              <div className="impact-metric text-center">
+                <span className="metric-number text-4xl font-heading text-primary">89%</span>
+                <p className="metric-label text-sm text-text-light">Cross-language accuracy</p>
+                <p className="metric-detail text-xs text-text-light">Hebrew, English, Arabic validation</p>
+              </div>
+              
+              <div className="impact-metric text-center">
+                <span className="metric-number text-4xl font-heading text-primary">12</span>
+                <p className="metric-label text-sm text-text-light">ALS families in beta</p>
+                <p className="metric-detail text-xs text-text-light">Clinical validation studies</p>
+              </div>
+              
+              <div className="impact-metric text-center">
+                <span className="metric-number text-4xl font-heading text-primary">0</span>
+                <p className="metric-label text-sm text-text-light">Privacy incidents</p>
+                <p className="metric-detail text-xs text-text-light">18 months deployment</p>
+              </div>
+              
+              <div className="impact-metric text-center">
+                <span className="metric-number text-4xl font-heading text-primary">&lt;200ms</span>
+                <p className="metric-label text-sm text-text-light">Response latency</p>
+                <p className="metric-detail text-xs text-text-light">Real-time performance</p>
+              </div>
+            </div>
+            
+            <div className="clinical-collaboration mt-8 p-6 bg-background rounded-xl">
+              <h4 className="font-heading text-lg text-secondary mb-3">Healthcare Research Partnerships</h4>
+              <p className="text-base mb-4">Collaborating with leading neurological rehabilitation centers and ALS research institutions to establish clinical validation protocols and regulatory pathways for assistive communication devices.</p>
+              <div className="partnership-focus grid md:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <strong>Clinical Applications:</strong> ALS communication, locked-in syndrome, severe stroke recovery, cerebral palsy assistance
+                </div>
+                <div>
+                  <strong>Regulatory Path:</strong> FDA medical device classification, CPT reimbursement codes, clinical trial design
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Future Research Directions */}
+          <div className="future-research">
+            <h3 className="font-heading text-2xl text-primary mb-6">Research Questions & Future Directions</h3>
+            <div className="research-questions grid md:grid-cols-2 gap-8">
+              <div className="question-cluster">
+                <h4 className="font-heading text-lg text-secondary mb-3">Cross-Cultural Emotion AI</h4>
+                <p className="text-base mb-3">How do we develop emotion recognition systems that work universally across cultural and linguistic boundaries while preserving individual expression patterns?</p>
+                <p className="text-sm text-text-light">Relevant to multisensory AI research in diverse populations and human-AI symbiosis.</p>
+              </div>
+              
+              <div className="question-cluster">
+                <h4 className="font-heading text-lg text-secondary mb-3">Privacy-Preserving Healthcare AI</h4>
+                <p className="text-base mb-3">Can we design federated learning architectures for emotion AI that enable research collaboration while maintaining patient privacy and regulatory compliance?</p>
+                <p className="text-sm text-text-light">Critical for responsible AI deployment in vulnerable populations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Project 2: Elbit Systems - Spatial Computing & HCI */}
+      <section className="project-section py-20 bg-background">
+        <div className="container">
+          <div className="project-header mb-12">
+            <h2 className="font-heading text-3xl text-primary mb-4">AI-Powered Spatial Computing Systems</h2>
+            <p className="text-xl text-secondary">Senior Program Engineering Manager • Elbit Systems • 2015-2023</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="project-content">
+              <h3 className="font-heading text-2xl text-secondary mb-6">IVAS Headset: Mixed Reality for Extreme Environments</h3>
+              
+              <div className="technical-details mb-8">
+                <h4 className="font-heading text-lg text-primary mb-4">Advanced Human-Computer Interaction</h4>
+                <ul className="tech-achievements space-y-3">
+                  <li><strong>Adaptive Interface Design:</strong> Real-time UI complexity adjustment based on user cognitive load and environmental stress</li>
+                  <li><strong>HoloLens Integration:</strong> Custom spatial computing applications with Microsoft Azure cloud services integration</li>
+                  <li><strong>3D Augmented Reality:</strong> Advanced mapping technologies with GPS-denied navigation capabilities</li>
+                  <li><strong>Multimodal Interaction:</strong> Voice, gesture, and gaze-based control systems for hands-free operation</li>
+                </ul>
+              </div>
+              
+              <div className="innovation-highlight p-6 bg-accent/10 rounded-xl mb-8">
+                <h4 className="font-heading text-lg text-accent mb-3">Key Innovation: Stress-Adaptive Interfaces</h4>
+                <p className="text-base">Developed first large-scale operational system using real-time physiological monitoring to adapt interface complexity—reducing cognitive load by 40% in high-stress scenarios while maintaining critical information accessibility.</p>
+              </div>
+              
+              <div className="research-relevance">
+                <h4 className="font-heading text-lg text-primary mb-3">Research Applications</h4>
+                <p className="text-base">This work directly informs responsive environment design, where sensor networks detect human state and adapt system behavior accordingly—applicable to healthcare monitoring, assistive robotics, and ambient intelligence systems.</p>
+              </div>
+            </div>
+            
+            <div className="technical-specs">
+              <h3 className="font-heading text-2xl text-secondary mb-6">Technical Architecture</h3>
+              
+              <div className="specs-grid space-y-6">
+                <div className="spec-item p-4 bg-primary/5 rounded">
+                  <h5 className="font-heading text-base text-primary mb-2">Real-Time Processing</h5>
+                  <p className="text-sm">GPU computing architecture for simultaneous 3D mapping, object recognition, and AR overlay rendering</p>
+                </div>
+                
+                <div className="spec-item p-4 bg-secondary/5 rounded">
+                  <h5 className="font-heading text-base text-primary mb-2">Sensor Fusion</h5>
+                  <p className="text-sm">IMU, cameras, LIDAR, and GPS integration for robust spatial understanding in challenging environments</p>
+                </div>
+                
+                <div className="spec-item p-4 bg-accent/5 rounded">
+                  <h5 className="font-heading text-base text-primary mb-2">Network Architecture</h5>
+                  <p className="text-sm">Mesh networking protocols for distributed computing and collaborative spatial mapping across multiple users</p>
+                </div>
+                
+                <div className="spec-item p-4 bg-primary/5 rounded">
+                  <h5 className="font-heading text-base text-primary mb-2">Safety Compliance</h5>
+                  <p className="text-sm">DO-178C and ISO 26262 compliant software development for mission-critical applications</p>
+                </div>
+              </div>
+              
+              <div className="impact-metrics mt-8">
+                <h4 className="font-heading text-lg text-primary mb-4">Measurable Impact</h4>
+                <div className="metrics-grid grid grid-cols-2 gap-4 text-sm">
+                  <div className="metric">
+                    <span className="metric-value font-heading text-2xl text-secondary">40%</span>
+                    <p className="metric-desc">Reduction in task completion time</p>
+                  </div>
+                  <div className="metric">
+                    <span className="metric-value font-heading text-2xl text-secondary">60%</span>
+                    <p className="metric-desc">Improvement in user satisfaction</p>
+                  </div>
+                  <div className="metric">
+                    <span className="metric-value font-heading text-2xl text-secondary">0</span>
+                    <p className="metric-desc">Safety incidents in field deployment</p>
+                  </div>
+                  <div className="metric">
+                    <span className="metric-value font-heading text-2xl text-secondary">1000s</span>
+                    <p className="metric-desc">Users across international programs</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Project 3: NVIDIA - Advanced Manufacturing Systems */}
+      <section className="project-section py-20">
+        <div className="container">
+          <div className="project-header mb-12">
+            <h2 className="font-heading text-3xl text-primary mb-4">Co-Packaged Optics: AI-Driven Manufacturing Systems</h2>
+            <p className="text-xl text-secondary">Senior Technical Program Manager • NVIDIA • 2022-2023</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="project-overview col-span-2">
+              <h3 className="font-heading text-2xl text-secondary mb-6">High-Volume AI Manufacturing Integration</h3>
+              
+              <p className="text-lg mb-6">Led end-to-end development of AI-powered manufacturing systems for next-generation optical interconnects, integrating machine learning with precision hardware manufacturing for datacenter-scale deployment.</p>
+              
+              <div className="technical-contributions mb-8">
+                <h4 className="font-heading text-lg text-primary mb-4">Technical Leadership</h4>
+                <ul className="contributions space-y-3">
+                  <li><strong>Cross-Functional AI Integration:</strong> Coordinated Engineering, Product, Strategy, and Regulatory teams for AI-driven quality control systems</li>
+                  <li><strong>Data-Driven Manufacturing:</strong> Implemented real-time analytics and statistical modeling for predictive maintenance and yield optimization</li>
+                  <li><strong>Customer Integration:</strong> Developed feedback loops with hyperscale datacenter operators to refine manufacturing processes</li>
+                  <li><strong>Scalability Architecture:</strong> Designed systems capable of processing millions of optical components with consistent quality metrics</li>
+                </ul>
+              </div>
+              
+              <div className="research-connection p-6 bg-background rounded-xl">
+                <h4 className="font-heading text-lg text-primary mb-3">Connection to Responsive Environment Research</h4>
+                <p className="text-base">This experience with large-scale sensor networks, real-time data processing, and adaptive manufacturing control directly applies to ambient intelligence systems and distributed sensing environments—core areas of responsive environment research.</p>
+              </div>
+            </div>
+            
+            <div className="technical-expertise">
+              <h3 className="font-heading text-2xl text-secondary mb-6">Systems Integration</h3>
+              
+              <div className="expertise-areas space-y-4">
+                <div className="area p-4 border border-border rounded">
+                  <h5 className="font-heading text-base text-primary mb-2">Real-Time Analytics</h5>
+                  <p className="text-sm">Machine learning pipelines for manufacturing quality prediction and anomaly detection</p>
+                </div>
+                
+                <div className="area p-4 border border-border rounded">
+                  <h5 className="font-heading text-base text-primary mb-2">Distributed Systems</h5>
+                  <p className="text-sm">Network architecture for coordinating AI processing across manufacturing facilities</p>
+                </div>
+                
+                <div className="area p-4 border border-border rounded">
+                  <h5 className="font-heading text-base text-primary mb-2">Hardware Integration</h5>
+                  <p className="text-sm">Embedded AI deployment in manufacturing equipment with microsecond response requirements</p>
+                </div>
+                
+                <div className="area p-4 border border-border rounded">
+                  <h5 className="font-heading text-base text-primary mb-2">Regulatory Compliance</h5>
+                  <p className="text-sm">Quality management systems meeting international manufacturing and AI deployment standards</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Project 4: Rafael - Advanced Data Processing */}
+      <section className="project-section py-20 bg-background">
+        <div className="container">
+          <div className="project-header mb-12">
+            <h2 className="font-heading text-3xl text-primary mb-4">Advanced Signal Processing & Autonomous Systems</h2>
+            <p className="text-xl text-secondary">Software/Systems Engineer • Rafael Advanced Defense Systems • 2003-2008</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="foundational-work">
+              <h3 className="font-heading text-2xl text-secondary mb-6">Big Data & Image Processing Foundations</h3>
+              
+              <p className="text-lg mb-6">Developed comprehensive signal processing systems for topographical analysis and autonomous navigation, establishing the technical foundation for later work in real-time AI and sensor fusion.</p>
+              
+              <div className="core-technologies mb-8">
+                <h4 className="font-heading text-lg text-primary mb-4">Core Technical Development</h4>
+                <ul className="tech-foundations space-y-3">
+                  <li><strong>3D Modeling & Reconstruction:</strong> Advanced algorithms for real-time topographical mapping and environmental understanding</li>
+                  <li><strong>Autonomous Systems Integration:</strong> GIS systems coordination with real-time navigation and path planning</li>
+                  <li><strong>High-Performance Computing:</strong> C/C++ optimization for real-time signal processing with strict latency requirements</li>
+                  <li><strong>System Optimization:</strong> Performance tuning for data-intensive applications processing terabytes of sensor data</li>
+                </ul>
+              </div>
+              
+              <div className="career-foundation p-6 bg-primary/5 rounded-xl">
+                <h4 className="font-heading text-lg text-primary mb-3">Career Foundation</h4>
+                <p className="text-base">This early experience established my approach to building reliable, high-performance systems that process complex data in real-time—principles that now underpin REACTU.io's emotion recognition architecture and inform my research interests in responsive sensing environments.</p>
+              </div>
+            </div>
+            
+            <div className="research-evolution">
+              <h3 className="font-heading text-2xl text-secondary mb-6">Research Evolution</h3>
+              
+              <div className="evolution-path space-y-6">
+                <div className="evolution-step">
+                  <h5 className="font-heading text-base text-accent mb-2">Signal Processing Mastery</h5>
+                  <p className="text-sm">Developed expertise in real-time data processing, sensor fusion, and autonomous system coordination</p>
+                </div>
+                
+                <div className="evolution-arrow text-center text-2xl text-text-light">↓</div>
+                
+                <div className="evolution-step">
+                  <h5 className="font-heading text-base text-accent mb-2">Human-Computer Interaction</h5>
+                  <p className="text-sm">Applied signal processing to AR/VR systems, learning how humans interact with complex technical systems</p>
+                </div>
+                
+                <div className="evolution-arrow text-center text-2xl text-text-light">↓</div>
+                
+                <div className="evolution-step">
+                  <h5 className="font-heading text-base text-accent mb-2">Emotion AI Research</h5>
+                  <p className="text-sm">Now combining signal processing expertise with human-centered design for healthcare applications</p>
+                </div>
+              </div>
+              
+              <div className="research-synthesis mt-8 p-6 bg-accent/10 rounded-xl">
+                <h4 className="font-heading text-lg text-accent mb-3">Research Synthesis</h4>
+                <p className="text-base">15+ years of technical evolution from autonomous systems to human-centered AI demonstrates the logical progression toward research in multisensory intelligence, responsive environments, and assistive robotics—combining technical rigor with human impact.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Research Vision & Future Work */}
+      <section className="research-vision py-20">
+        <div className="container">
+          <h2 className="font-heading text-4xl text-primary text-center mb-12">Research Vision & Future Directions</h2>
+          
+          <div className="vision-grid grid md:grid-cols-3 gap-8">
+            <div className="vision-area p-8 bg-primary/5 rounded-2xl">
+              <h3 className="font-heading text-2xl text-primary mb-4">Multisensory AI for Healthcare</h3>
+              <p className="text-base mb-6">Advancing human-AI symbiosis through multimodal emotion recognition systems that preserve privacy while enabling clinical-grade performance across diverse populations.</p>
+              <div className="research-focus">
+                <h4 className="font-heading text-lg text-secondary mb-2">Key Questions</h4>
+                <ul className="text-sm space-y-2">
+                  <li>• Cross-cultural emotion AI generalization</li>
+                  <li>• Federated learning for healthcare applications</li>
+                  <li>• Real-time multimodal signal fusion</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="vision-area p-8 bg-secondary/5 rounded-2xl">
+              <h3 className="font-heading text-2xl text-primary mb-4">Responsive Sensing Environments</h3>
+              <p className="text-base mb-6">Developing ambient intelligence systems that adapt to human emotional and physiological states while maintaining unobtrusiveness and user autonomy.</p>
+              <div className="research-focus">
+                <h4 className="font-heading text-lg text-secondary mb-2">Key Questions</h4>
+                <ul className="text-sm space-y-2">
+                  <li>• Energy-efficient continuous emotion monitoring</li>
+                  <li>• Privacy-preserving ambient sensing</li>
+                  <li>• Human-environment interaction models</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="vision-area p-8 bg-accent/5 rounded-2xl">
+              <h3 className="font-heading text-2xl text-primary mb-4">Social AI & Assistive Robotics</h3>
+              <p className="text-base mb-6">Creating emotion-aware robotic systems that can understand and respond to human emotional needs in healthcare, education, and assistive technology applications.</p>
+              <div className="research-focus">
+                <h4 className="font-heading text-lg text-secondary mb-2">Key Questions</h4>
+                <ul className="text-sm space-y-2">
+                  <li>• Ethical AI deployment in vulnerable populations</li>
+                  <li>• Long-term human-robot emotional relationships</li>
+                  <li>• Adaptive robotic behavior for individual needs</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div className="research-commitment mt-16 text-center">
+            <h3 className="font-heading text-3xl text-primary mb-6">Commitment to Research Excellence</h3>
+            <p className="text-xl max-w-4xl mx-auto mb-8">My goal is to bridge the gap between advanced technical research and real-world deployment, ensuring that breakthrough discoveries in AI and robotics genuinely improve human lives—particularly for those who need technology most.</p>
+            
+            <div className="commitment-pillars grid md:grid-cols-3 gap-6 mt-12">
+              <div className="pillar text-center">
+                <div className="pillar-icon text-4xl text-primary mb-4">🔬</div>
+                <h4 className="font-heading text-lg text-secondary mb-2">Technical Rigor</h4>
+                <p className="text-sm">Applying defense-grade engineering standards to research for clinical deployment</p>
+              </div>
+              
+              <div className="pillar text-center">
+                <div className="pillar-icon text-4xl text-primary mb-4">🤝</div>
+                <h4 className="font-heading text-lg text-secondary mb-2">Human-Centered Design</h4>
+                <p className="text-sm">Technology that serves human flourishing and preserves dignity</p>
+              </div>
+              
+              <div className="pillar text-center">
+                <div className="pillar-icon text-4xl text-primary mb-4">🌍</div>
+                <h4 className="font-heading text-lg text-secondary mb-2">Global Impact</h4>
+                <p className="text-sm">Research that scales to help millions across cultural and linguistic boundaries</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
