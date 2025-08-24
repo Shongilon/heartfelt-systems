@@ -202,32 +202,93 @@ const Story = () => {
           className="py-20 mt-20 bg-primary/5 rounded-3xl px-8"
         >
           <div className="container max-w-4xl mx-auto">
-            <h3 className="font-heading text-3xl text-primary mb-8 text-center">Who I Am</h3>
+            <h3 className="font-heading text-3xl text-primary mb-8 text-center">From Systems Engineering to Emotion AI</h3>
             
             <div className="grid md:grid-cols-2 gap-12">
               <div className="profile-content">
-                <p className="text-lg mb-6 leading-relaxed">
-                  I'm a 50-year-old father and technologist from Tel Aviv, driven by the belief that 
-                  the most sophisticated AI means nothing if it doesn't understand human vulnerability.
-                </p>
+                <p className="text-lg mb-6">I'm a systems engineer who spent 15+ years building technology that couldn't fail—from fighter jet navigation to augmented reality platforms. Now I build technology that helps people feel.</p>
                 
-                <p className="text-lg leading-relaxed">
-                  My journey from defense systems to emotion AI isn't a career change—it's the logical 
-                  evolution of someone who's spent 15 years learning that reliable technology must serve 
-                  real human needs.
-                </p>
+                <p className="text-lg mb-6">As <strong>CTO at REACTU.io</strong>, I'm pioneering the first systems that translate physiological signals into emotional expression for people who can think and feel but cannot communicate.</p>
+                
+                <p className="text-lg">I've learned that the same engineering rigor that keeps aircraft systems reliable can create <strong>clinical-grade emotion AI</strong> that restores human connection when words fail.</p>
               </div>
               
-              <div className="what-drives-me">
-                <h4 className="font-heading text-xl text-secondary mb-4">What Drives Me</h4>
-                <p className="mb-4 leading-relaxed">
-                  Personal experiences with family members facing ALS and autism showed me how emotion 
-                  recognition could transform assistive technology.
-                </p>
-                <p className="leading-relaxed">
-                  I want to bring systems engineering rigor to the deeply human challenge of building 
-                  AI that truly understands us.
-                </p>
+              <div className="research-interests">
+                <h4 className="font-heading text-xl text-secondary mb-4">Core Research Interests</h4>
+                
+                <div className="interest-cluster mb-4">
+                  <h5 className="font-heading text-base text-primary mb-2">Multisensory AI for Human Experience</h5>
+                  <p className="text-sm text-text-light">Multimodal signal fusion, human-AI symbiosis, real-time neural architectures</p>
+                </div>
+                
+                <div className="interest-cluster mb-4">
+                  <h5 className="font-heading text-base text-primary mb-2">Responsive Sensing Environments</h5>
+                  <p className="text-sm text-text-light">Wearable sensor networks, ambient intelligence, interactive healthcare interfaces</p>
+                </div>
+                
+                <div className="interest-cluster mb-4">
+                  <h5 className="font-heading text-base text-primary mb-2">Social AI & Assistive Technology</h5>
+                  <p className="text-sm text-text-light">Emotion-aware systems, communication barrier solutions, AI ethics in healthcare</p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Highlight Block: The Human Challenge */}
+            <div className="human-challenge mt-16 p-8 bg-primary/10 rounded-2xl">
+              <h4 className="font-heading text-2xl text-primary mb-6 text-center">The Human Challenge Driving My Research</h4>
+              
+              <blockquote className="text-xl text-center text-primary italic mb-8 max-w-3xl mx-auto">
+                "Imagine being fully aware, trapped in a body that cannot express even the simplest emotions. Millions of people live this reality daily."
+              </blockquote>
+              
+              <div className="grid md:grid-cols-3 gap-6 text-center">
+                <div className="stat-item">
+                  <span className="text-3xl font-heading text-secondary">20M+</span>
+                  <p className="text-sm text-text-light">People with preserved cognition but cannot express emotions</p>
+                </div>
+                
+                <div className="stat-item">
+                  <span className="text-3xl font-heading text-secondary">4 Conditions</span>
+                  <p className="text-sm text-text-light">ALS, locked-in syndrome, cerebral palsy, severe stroke</p>
+                </div>
+                
+                <div className="stat-item">
+                  <span className="text-3xl font-heading text-secondary">$5B+</span>
+                  <p className="text-sm text-text-light">Untapped market in emotion-enabled communication</p>
+                </div>
+              </div>
+              
+              <p className="text-center text-lg mt-6 max-w-2xl mx-auto">
+                REACTU.io creates <strong>"AI that feels you"</strong> — technology designed to restore dignity and connection for those who need it most.
+              </p>
+            </div>
+            
+            {/* Compact Technical Foundation */}
+            <div className="technical-foundation mt-12 pt-8 border-t border-border">
+              <h4 className="font-heading text-lg text-secondary mb-6 text-center">Technical Foundation</h4>
+              
+              <div className="grid md:grid-cols-3 gap-6 text-sm">
+                <div className="foundation-item">
+                  <h5 className="font-heading text-base text-primary mb-2">Education & Leadership</h5>
+                  <p className="text-text-light">MBA Technology Management (Tel Aviv), B.Sc. Computer Science (Haifa)</p>
+                  <p className="text-text-light">Led international teams, managed complex research collaborations</p>
+                </div>
+                
+                <div className="foundation-item">
+                  <h5 className="font-heading text-base text-primary mb-2">Core Technologies</h5>
+                  <p className="text-text-light">PyTorch, multimodal signal processing, biosensor integration, real-time neural networks</p>
+                </div>
+                
+                <div className="foundation-item">
+                  <h5 className="font-heading text-base text-primary mb-2">Systems Expertise</h5>
+                  <p className="text-text-light">High-reliability deployment, regulatory compliance (DO-178C), embedded systems architecture</p>
+                </div>
+              </div>
+              
+              <div className="career-timeline mt-8 text-center">
+                <div className="timeline-flow text-xs text-text-light">
+                  <strong>Rafael</strong> (Image Processing) → <strong>Elbit</strong> (Spatial Computing) → <strong>NVIDIA</strong> (AI Manufacturing) → <strong>REACTU.io</strong> (Emotion AI)
+                </div>
               </div>
             </div>
           </div>
