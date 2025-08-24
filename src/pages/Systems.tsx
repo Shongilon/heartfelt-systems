@@ -188,6 +188,73 @@ const Systems = () => {
           })()}
         </motion.div>
 
+        {/* CV/Background Section */}
+        <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="py-20 mt-20"
+        >
+          <div className="container max-w-4xl">
+            <h3 className="font-heading text-3xl text-primary mb-12 text-center">Professional Journey</h3>
+            
+            {/* Education */}
+            <div className="cv-block mb-12">
+              <h4 className="font-heading text-xl text-secondary mb-6">Education</h4>
+              <div className="timeline-items space-y-6">
+                <div className="cv-item flex items-start gap-6 p-6 bg-card rounded-xl shadow-card">
+                  <span className="year font-mono text-sm text-accent bg-accent/10 px-3 py-1 rounded-full min-w-fit">2012</span>
+                  <div className="details">
+                    <h5 className="font-heading text-lg text-primary mb-2">MBA, Technology Management & Information Systems</h5>
+                    <p className="institution text-text-light">Tel Aviv University, Israel</p>
+                  </div>
+                </div>
+                
+                <div className="cv-item flex items-start gap-6 p-6 bg-card rounded-xl shadow-card">
+                  <span className="year font-mono text-sm text-accent bg-accent/10 px-3 py-1 rounded-full min-w-fit">2008</span>
+                  <div className="details">
+                    <h5 className="font-heading text-lg text-primary mb-2">B.Sc., Computer Sciences</h5>
+                    <p className="institution text-text-light">Haifa University, Israel</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Career Progression */}
+            <div className="cv-block">
+              <h4 className="font-heading text-xl text-secondary mb-6">Career Progression</h4>
+              <div className="timeline-items space-y-6">
+                <div className="cv-item flex items-start gap-6 p-6 bg-card rounded-xl shadow-card">
+                  <span className="year font-mono text-sm text-accent bg-accent/10 px-3 py-1 rounded-full min-w-fit">2023+</span>
+                  <div className="details">
+                    <h5 className="font-heading text-lg text-primary mb-2">Emotion AI Research & Development</h5>
+                    <p className="institution text-text-light mb-3">Transitioning to MIT Media Lab</p>
+                    <ul className="text-sm text-text-light space-y-1">
+                      <li>• Cross-cultural emotion recognition systems</li>
+                      <li>• Privacy-first AI architectures</li>
+                      <li>• Human-centered interface design</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="cv-item flex items-start gap-6 p-6 bg-card rounded-xl shadow-card">
+                  <span className="year font-mono text-sm text-accent bg-accent/10 px-3 py-1 rounded-full min-w-fit">2008-2023</span>
+                  <div className="details">
+                    <h5 className="font-heading text-lg text-primary mb-2">Systems Engineering & Technical Leadership</h5>
+                    <p className="institution text-text-light mb-3">Aviation & Defense Systems</p>
+                    <ul className="text-sm text-text-light space-y-1">
+                      <li>• 15+ years building safety-critical systems</li>
+                      <li>• Real-time processing under extreme constraints</li>
+                      <li>• Zero-failure tolerance architectures</li>
+                      <li>• Human factors integration in technical systems</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.section>
+
         {/* Personal Technical Philosophy */}
         <motion.section
           initial={{ opacity: 0, y: 50 }}
