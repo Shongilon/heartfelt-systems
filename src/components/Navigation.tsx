@@ -19,10 +19,10 @@ const Navigation = () => {
 
   const navLinks = [
     { to: '/', label: 'Home', id: 'home' },
-    { to: '/story', label: 'Story', id: 'story' },
+    { to: '/about', label: 'About', id: 'about' },
     { to: '/research', label: 'Research', id: 'research' },
-    { to: '/systems', label: 'Systems', id: 'systems' },
     { to: '/vision', label: 'Vision', id: 'vision' },
+    { to: '/contact', label: 'Contact', id: 'contact' },
   ];
 
   const isActive = (path: string) => {

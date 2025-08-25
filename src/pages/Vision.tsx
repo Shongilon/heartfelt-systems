@@ -197,60 +197,6 @@ const Vision = () => {
           </div>
         </motion.section>
 
-        {/* Contact Section */}
-        <motion.section
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="py-20 bg-background"
-        >
-          <div className="container max-w-2xl text-center mx-auto">
-            <h3 className="font-heading text-3xl text-primary mb-8">Let's Discuss Emotion AI Research</h3>
-            
-            <p className="text-lg text-text-light mb-12">
-              I'm particularly interested in collaborating on privacy-preserving emotion recognition, 
-              cross-cultural AI systems, and clinical applications of affective computing.
-            </p>
-            
-            <div className="contact-grid grid md:grid-cols-3 gap-8 mb-12">
-              <div className="contact-item">
-                <h4 className="font-heading text-lg text-secondary mb-2">Email</h4>
-                <a href="mailto:itai.katz@reactu.io" className="text-primary hover:text-primary/80 transition-colors">
-                  itai.katz@reactu.io
-                </a>
-              </div>
-              
-              <div className="contact-item">
-                <h4 className="font-heading text-lg text-secondary mb-2">Location</h4>
-                <p className="text-text-light">Tel Aviv → Boston (for studies)</p>
-              </div>
-              
-              <div className="contact-item">
-                <h4 className="font-heading text-lg text-secondary mb-2">Timeline</h4>
-                <p className="text-text-light">Applying Fall 2026</p>
-              </div>
-            </div>
-            
-            {/* Research Focus Areas */}
-            <div className="research-interests">
-              <h4 className="font-heading text-lg text-secondary mb-4">Research Interests</h4>
-              <div className="interests-tags flex flex-wrap justify-center gap-3">
-                <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-                  Cross-Cultural Emotion AI
-                </span>
-                <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-                  Privacy-Preserving Systems
-                </span>
-                <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-                  ALS Communication Technology
-                </span>
-                <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-                  Clinical-Grade AI
-                </span>
-              </div>
-            </div>
-          </div>
-        </motion.section>
       </div>
     </div>
   );

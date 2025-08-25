@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
-const Story = () => {
+const About = () => {
   const [expandedPeriod, setExpandedPeriod] = useState<string | null>(null);
 
   const timelinePeriods = [
@@ -298,4 +298,4 @@ const Story = () => {
   );
 };
 
-export default Story;
+export default About;
