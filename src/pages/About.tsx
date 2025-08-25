@@ -28,9 +28,9 @@ const About = () => {
       ]
     },
     {
-      id: '2020-2024',
+      id: '2020-2025',
       title: 'Emotion AI Research',
-      subtitle: '2020-2024',
+      subtitle: '2020-2025',
       description: '"What if your heartbeat could be a language?"',
       details: [
         "Founded research into emotion recognition technology",
