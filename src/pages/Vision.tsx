@@ -21,18 +21,18 @@ const Vision = () => {
 
   const timelineItems = [
     {
-      year: 'Year 1',
-      goal: 'Build emotion AI that works for my grandmother in Tel Aviv and my colleague in Boston',
+      year: 'Year 1-2',
+      goal: 'Build cross-cultural emotion AI that works universally—from Tel Aviv to Boston to Beijing',
       color: 'bg-primary'
     },
     {
-      year: 'Year 2', 
+      year: 'Year 2-3', 
       goal: 'Prove that privacy and emotion recognition can coexist in clinical settings',
       color: 'bg-secondary'
     },
     {
-      year: 'Year 3',
-      goal: 'Deploy one system that genuinely helps ALS families stay connected',
+      year: 'Long-term',
+      goal: 'Deploy systems that genuinely help ALS families and neurological patients stay connected',
       color: 'bg-accent'
     }
   ];
@@ -47,10 +47,10 @@ const Vision = () => {
           className="text-center mb-20"
         >
           <h1 className="font-heading text-5xl text-primary mb-6">
-            Research Questions That Drive Me
+            Research Vision & Future Directions
           </h1>
           <p className="text-xl text-text-light max-w-3xl mx-auto">
-            The intersection of technical excellence and human need
+            How 15+ years of systems engineering can advance emotion AI research and clinical deployment
           </p>
         </motion.div>
 
@@ -82,7 +82,7 @@ const Vision = () => {
           ))}
         </div>
 
-        {/* MIT Research Alignment */}
+        {/* Research Trajectory */}
         <motion.section
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -91,7 +91,7 @@ const Vision = () => {
         >
           <div className="max-w-4xl mx-auto">
             <h3 className="font-heading text-3xl text-primary mb-12 text-center">
-              My Research Trajectory at MIT
+              My Research Trajectory
             </h3>
             
             <div className="space-y-8">
@@ -120,7 +120,7 @@ const Vision = () => {
           </div>
         </motion.section>
 
-        {/* Alignment with Affective Computing Group */}
+        {/* Research Philosophy */}
         <motion.section
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -129,28 +129,31 @@ const Vision = () => {
         >
           <div className="max-w-4xl mx-auto">
             <h3 className="font-heading text-3xl text-primary mb-8">
-              Why Rosalind Picard's Lab?
+              My Research Philosophy
             </h3>
             <div className="space-y-6 text-lg leading-relaxed">
               <p>
-                The Affective Computing Group isn't just studying emotion recognition—they're building 
-                technology that enhances human dignity. That's exactly what drew me to this field.
+                I believe the most meaningful research happens at the intersection of technical rigor 
+                and human need. My 15+ years building mission-critical systems taught me that 
+                breakthrough technology means nothing if it fails when people need it most.
               </p>
               <p>
-                I bring 15 years of systems engineering rigor to problems that matter: helping a child 
-                with autism communicate their feelings, enabling someone with ALS to maintain their 
-                emotional voice, building AI that respects both accuracy and privacy.
+                This drives my commitment to emotion AI research that doesn't just advance the field 
+                theoretically, but actually reaches the families who need it. I want to help a child 
+                with autism communicate their feelings, enable someone with ALS to maintain their 
+                emotional voice, and build AI that respects both accuracy and privacy.
               </p>
               <p>
-                My experience with safety-critical systems taught me that the most sophisticated technology 
-                means nothing if it fails when people need it most. I want to bring that same reliability 
-                standard to emotion AI.
+                My background gives me a unique perspective: I know how to build technology that works 
+                reliably in the real world, and I understand the human cost when systems fail. This is 
+                the reliability standard I want to bring to academic research.
               </p>
             </div>
             
             <div className="bg-primary/5 rounded-2xl p-8 mt-8">
               <blockquote className="text-xl font-heading text-primary italic">
-                "Technical excellence in service of human flourishing—that's what I want to achieve at MIT."
+                "I don't want to just publish papers. I want to build systems that actually reach 
+                the families who need them most."
               </blockquote>
             </div>
           </div>
