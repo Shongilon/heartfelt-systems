@@ -1,21 +1,14 @@
 import { motion } from "framer-motion";
-import { ChevronDown, ChevronRight, Users, Target, Clock, Shield } from "lucide-react";
-import { useState } from "react";
+import { ChevronRight } from "lucide-react";
 
 const Research = () => {
-  const [openDetails, setOpenDetails] = useState<string | null>(null);
-
-  const toggleDetails = (section: string) => {
-    setOpenDetails(openDetails === section ? null : section);
-  };
-
   return (
     <div className="min-h-screen">
-      {/* Hero Section - Enhanced */}
-      <section className="py-24 bg-gradient-subtle">
+      {/* Research Hero */}
+      <section className="research-hero py-16">
         <div className="container text-center">
           <motion.h1 
-            className="font-heading text-5xl md:text-6xl text-primary mb-8"
+            className="font-heading text-4xl text-primary mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -23,23 +16,22 @@ const Research = () => {
             Research Portfolio
           </motion.h1>
           <motion.p 
-            className="text-xl text-text-light max-w-4xl mx-auto leading-relaxed"
+            className="text-lg text-text-light max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Building AI systems that don't just calculate, but connect — not just respond, but relate
+            Building AI systems that understand human emotion and enhance human capabilities
           </motion.p>
         </div>
       </section>
 
-      {/* REACTU - Hero Project with Enhanced Visual Treatment */}
-      <section className="py-32 bg-primary/3">
+      {/* REACTU - Primary Research Focus */}
+      <section className="hero-project py-24">
         <div className="container">
-          {/* Project Introduction - More Prominent */}
-          <div className="project-intro mb-16 text-center">
+          <div className="project-intro mb-16">
             <motion.h2 
-              className="font-heading text-4xl md:text-5xl text-primary mb-6"
+              className="font-heading text-4xl text-primary mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -47,26 +39,26 @@ const Research = () => {
               REACTU: AI for Emotional Communication
             </motion.h2>
             <motion.p 
-              className="text-2xl text-secondary mb-12 max-w-4xl mx-auto"
+              className="text-xl text-secondary mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Giving voice to 20 million people who can think and feel but cannot speak
+              Pioneering breakthrough technology that translates physiological signals into real-time emotional expression
             </motion.p>
             
             <motion.div 
-              className="research-question bg-accent/10 p-8 rounded-2xl mb-12 max-w-5xl mx-auto"
+              className="research-question bg-accent/10 p-8 rounded-2xl mb-12"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <h3 className="font-heading text-2xl text-accent mb-4">The Research Question</h3>
-              <p className="text-lg">Can AI reliably infer human emotions directly from physiological signals? I'm developing AI that translates biosignals into emotional expression for people with ALS, locked-in syndrome, and severe stroke who have preserved cognition but cannot communicate their feelings.</p>
+              <p className="text-lg">Can AI reliably infer human emotions directly from physiological signals? I'm developing multi-modal biosensor systems that decode emotional states for people with preserved cognition but communication barriers—starting with ALS patients, locked-in syndrome, and severe stroke survivors.</p>
             </motion.div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16">
+          <div className="grid md:grid-cols-2 gap-16">
             <motion.div 
               className="research-approach"
               initial={{ opacity: 0, x: -20 }}
@@ -77,17 +69,52 @@ const Research = () => {
               
               <div className="approach-details space-y-8">
                 <div className="detail-block">
-                  <h4 className="font-heading text-xl text-primary mb-4">Neural Network Architecture</h4>
-                  <p className="text-base leading-relaxed">Built transformer models that process multimodal biosignals (skin conductance, muscle activity, heart signals, motion) to classify emotions in real time. The system learns individual physiological patterns while maintaining privacy through edge processing.</p>
+                  <h4 className="font-heading text-xl text-primary mb-4">Multi-Modal Sensor Fusion</h4>
+                  <p className="text-base mb-4">Developed proprietary algorithms that process synchronized biosignals from multiple sensors: skin conductance (GSR), muscle activity (EMG), heart signals (ECG), and motion patterns (IMU). The system captures subtle physiological changes that correlate with emotional states.</p>
+                  <div className="technical-highlight p-4 bg-primary/5 rounded text-sm">
+                    <strong>Key Innovation:</strong> Patent-pending sensor fusion methodology specifically designed for emotion classification in clinical settings.
+                  </div>
                 </div>
                 
                 <div className="detail-block">
-                  <h4 className="font-heading text-xl text-primary mb-4">Cross-Cultural Validation</h4>
-                  <p className="text-base leading-relaxed">Tested algorithms across Hebrew, English, and Arabic speakers to address cultural bias in emotion recognition. Built federated learning approaches that improve models without sharing patient data.</p>
+                  <h4 className="font-heading text-xl text-primary mb-4">Machine Learning Architecture Comparison</h4>
+                  <p className="text-base mb-4">Conducted systematic comparative analysis of five neural network architectures using multiple validated datasets. Implemented rigorous two-stage methodology with Leave-One-Subject-Out cross-validation to ensure generalizability to new users.</p>
+                  
+                  <div className="research-datasets mb-4 p-4 bg-secondary/5 rounded">
+                    <h5 className="font-semibold text-primary mb-2">Validated Datasets</h5>
+                    <ul className="text-sm space-y-1">
+                      <li><strong>DEAP:</strong> Database for Emotion Analysis using Physiological Signals</li>
+                      <li><strong>DREAMER:</strong> EEG and ECG recordings from 23 participants during emotion elicitation</li>
+                      <li><strong>MAHNOB-HCI:</strong> Multimodal human-computer interaction dataset</li>
+                      <li><strong>AMIGOS:</strong> Dataset for Affect, Personality, and Mood Research</li>
+                      <li><strong>ASCERTAIN:</strong> Multimodal emotion recognition dataset</li>
+                      <li><strong>SEMAINE:</strong> Sustained Emotionally colored Machine-human Interaction</li>
+                    </ul>
+                  </div>
+
+                  <details className="model-architectures mt-4">
+                    <summary className="cursor-pointer text-primary font-heading flex items-center mb-2">
+                      <ChevronRight className="w-4 h-4 mr-2" />
+                      Neural Network Architectures Evaluated
+                    </summary>
+                    <div className="p-4 bg-primary/5 rounded text-sm space-y-3">
+                      <div><strong>Hybrid CNN-LSTM Model:</strong> Combines convolutional layers for feature extraction with LSTM layers for temporal sequence modeling</div>
+                      <div><strong>CRBENN (Continuous Radial Basis Emotional Neural Network):</strong> Specialized architecture for continuous emotion recognition using radial basis functions</div>
+                      <div><strong>WaveNet:</strong> Dilated convolutional network originally designed for audio, adapted for physiological signal processing</div>
+                      <div><strong>Transformers:</strong> Attention-based architecture for sequence-to-sequence emotion classification</div>
+                      <div><strong>GameEmo-CapsNet:</strong> Capsule network implementation for emotion recognition with dynamic routing</div>
+                      <div><strong>Ensemble Methods:</strong> Multiple model combination approaches for improved robustness</div>
+                    </div>
+                  </details>
+
+                  <div className="methodology-highlight mt-4 p-4 bg-accent/5 rounded text-sm">
+                    <strong>Rigorous Validation Methodology:</strong> Two-stage evaluation with initial 80/20 train-test splits across multiple runs, followed by Leave-One-Subject-Out cross-validation on top performers. Performance assessed using Mean Absolute Error (MAE) and custom success rate metrics across valence, arousal, and dominance dimensions.
+                  </div>
                 </div>
                 
-                <div className="innovation-highlight p-6 bg-primary/8 rounded-xl border-l-4 border-primary">
-                  <p className="text-base"><strong className="text-primary">Key Innovation:</strong> First clinical-grade emotion AI system that works entirely offline, meeting healthcare privacy requirements while maintaining real-time performance.</p>
+                <div className="detail-block">
+                  <h4 className="font-heading text-xl text-primary mb-4">Privacy-First Architecture</h4>
+                  <p className="text-base">All processing occurs on edge devices with HIPAA-compliant data architecture. No physiological data leaves the patient's device, ensuring complete privacy while maintaining real-time performance.</p>
                 </div>
               </div>
             </motion.div>
@@ -98,69 +125,136 @@ const Research = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
             >
-              <h3 className="font-heading text-3xl text-secondary mb-8">Results & Validation</h3>
+              <h3 className="font-heading text-3xl text-secondary mb-8">Current Results</h3>
               
-              {/* Enhanced Metrics Grid - Human Impact First */}
-              <div className="metrics-grid grid grid-cols-2 gap-6 mb-12">
-                <div className="metric text-center p-8 bg-background rounded-xl shadow-elegant hover-scale">
-                  <Users className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <span className="text-4xl font-heading text-primary block mb-2">12</span>
-                  <p className="text-sm font-medium">Families in clinical trial</p>
+              <div className="metrics-grid grid grid-cols-2 gap-6 mb-10">
+                <div className="metric text-center p-6 bg-background rounded-lg shadow-sm hover-scale">
+                  <span className="text-4xl font-heading text-primary">94%</span>
+                  <p className="text-sm font-medium">Preliminary accuracy across 6 primary emotions</p>
                 </div>
-                <div className="metric text-center p-8 bg-background rounded-xl shadow-elegant hover-scale">
-                  <Target className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <span className="text-4xl font-heading text-primary block mb-2">89%</span>
-                  <p className="text-sm font-medium">Accuracy across cultures</p>
+                <div className="metric text-center p-6 bg-background rounded-lg shadow-sm hover-scale">
+                  <span className="text-4xl font-heading text-primary">500ms</span>
+                  <p className="text-sm font-medium">Target latency for real-time processing</p>
                 </div>
-                <div className="metric text-center p-8 bg-background rounded-xl shadow-elegant hover-scale">
-                  <Clock className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <span className="text-4xl font-heading text-primary block mb-2">200ms</span>
-                  <p className="text-sm font-medium">Fast enough for conversation</p>
+                <div className="metric text-center p-6 bg-background rounded-lg shadow-sm hover-scale">
+                  <span className="text-4xl font-heading text-primary">20+</span>
+                  <p className="text-sm font-medium">Test subjects planned across 3 conditions</p>
                 </div>
-                <div className="metric text-center p-8 bg-background rounded-xl shadow-elegant hover-scale">
-                  <Shield className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <span className="text-4xl font-heading text-primary block mb-2">100%</span>
-                  <p className="text-sm font-medium">Designed for offline use</p>
+                <div className="metric text-center p-6 bg-background rounded-lg shadow-sm hover-scale">
+                  <span className="text-4xl font-heading text-primary">92%+</span>
+                  <p className="text-sm font-medium">Target accuracy for validation dataset</p>
                 </div>
               </div>
               
-              <div className="clinical-validation p-8 bg-background rounded-2xl shadow-elegant">
-                <h4 className="font-heading text-xl text-secondary mb-4">Clinical Research</h4>
-                <p className="text-base mb-6 leading-relaxed">IRB-approved studies with neurological rehabilitation centers validate the system's effectiveness with ALS patients. Research focuses on preserving individual personality in emotional expression while maintaining clinical accuracy.</p>
+              <div className="current-status p-6 bg-background rounded-xl mb-8">
+                <h4 className="font-heading text-lg text-secondary mb-3">Development Status & Technical Implementation</h4>
+                <p className="text-base mb-4">Currently in active development with biosensor integration targeting Q2 2025. Comprehensive neural architecture evaluation completed with rigorous cross-validation methodology demonstrating model generalizability.</p>
                 
-                <div className="patient-impact p-4 bg-primary/5 rounded-lg border-l-4 border-primary">
-                  <p className="text-base text-primary font-medium">"For the first time, my computer understood when I was frustrated with it."</p>
-                  <p className="text-sm text-text-light mt-2">— Beta testing participant</p>
+                <div className="code-availability mb-4 p-4 bg-primary/5 rounded">
+                  <h5 className="font-semibold text-primary mb-2">Open Research Implementation</h5>
+                  <p className="text-sm mb-2">Complete source code available for architecture comparison study, including:</p>
+                  <ul className="text-sm list-disc pl-5 space-y-1">
+                    <li>PyTorch implementations of all six neural architectures</li>
+                    <li>Data preprocessing pipelines for physiological signals</li>
+                    <li>Leave-One-Subject-Out cross-validation framework</li>
+                    <li>Performance evaluation metrics and visualization tools</li>
+                    <li>Ensemble method implementations and model fusion strategies</li>
+                  </ul>
                 </div>
+                
+                <div className="roadmap-highlights text-sm">
+                  <strong>Next Technical Milestones:</strong>
+                  <ul className="list-disc pl-5 mt-2 space-y-1">
+                    <li>Complete 500+ session labeled dataset across diverse populations</li>
+                    <li>Achieve &lt;500ms latency on edge processing devices</li>
+                    <li>Deploy top-performing architecture on Shimmer biosensor hardware</li>
+                    <li>Begin pilot studies at major rehabilitation centers</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="competitive-advantage p-6 bg-accent/5 rounded-xl">
+                <h4 className="font-heading text-lg text-accent mb-3">Unique Market Position</h4>
+                <p className="text-base">Only solution combining non-invasive biosensors with AI specifically designed for medical communication applications. Existing assistive devices provide basic yes/no responses, while emotion AI companies focus on consumer applications rather than clinical needs.</p>
               </div>
             </motion.div>
           </div>
 
           <motion.div 
-            className="future-research mt-20 p-10 bg-primary/8 rounded-3xl"
+            className="technical-depth mt-16 p-10 bg-background rounded-2xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
           >
-            <h3 className="font-heading text-3xl text-primary mb-8 text-center">Open Research Questions</h3>
-            <div className="questions-grid grid md:grid-cols-2 gap-8">
-              <div className="p-6 bg-background/50 rounded-xl">
-                <p className="text-lg leading-relaxed">How do we scale emotion AI globally while preserving cultural nuances in emotional expression?</p>
+            <h3 className="font-heading text-3xl text-primary mb-8">Technical Research Contributions</h3>
+            
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="research-methodology">
+                <h4 className="font-heading text-xl text-secondary mb-4">Novel Evaluation Framework</h4>
+                <p className="text-base mb-4">Developed rigorous methodology for emotion recognition model comparison addressing critical challenge of user generalizability in real-world deployments.</p>
+                
+                <div className="methodology-details text-sm p-4 bg-primary/5 rounded">
+                  <strong>Two-Stage Validation Approach:</strong>
+                  <ul className="list-disc pl-5 mt-2 space-y-1">
+                    <li>Stage 1: Rapid architecture comparison using 80/20 splits with 5-fold iteration</li>
+                    <li>Stage 2: Leave-One-Subject-Out cross-validation for top performers</li>
+                    <li>Holdout test set (2-3 participants) for final new-user evaluation</li>
+                    <li>Performance metrics: MAE and custom success rates across valence/arousal/dominance</li>
+                  </ul>
+                </div>
               </div>
-              <div className="p-6 bg-background/50 rounded-xl">
-                <p className="text-lg leading-relaxed">Can federated learning enable collaborative research while maintaining patient privacy in healthcare AI?</p>
+              
+              <div className="model-innovations">
+                <h4 className="font-heading text-xl text-secondary mb-4">Architecture Innovations</h4>
+                <p className="text-base mb-4">Systematic evaluation of state-of-the-art architectures adapted for physiological emotion recognition, with novel ensemble approaches for improved robustness.</p>
+                
+                <details className="implementation-details">
+                  <summary className="cursor-pointer text-primary font-heading flex items-center mb-2">
+                    <ChevronRight className="w-4 h-4 mr-2" />
+                    Implementation Highlights
+                  </summary>
+                  <div className="p-4 bg-secondary/5 rounded text-sm space-y-2">
+                    <div><strong>Data Pipeline:</strong> Custom preprocessing for Shimmer biosensor integration with real-time filtering</div>
+                    <div><strong>Feature Engineering:</strong> Multi-scale temporal feature extraction optimized for physiological signals</div>
+                    <div><strong>Model Fusion:</strong> Ensemble methods combining complementary architecture strengths</div>
+                    <div><strong>Edge Deployment:</strong> Model optimization for real-time inference on resource-constrained devices</div>
+                  </div>
+                </details>
+              </div>
+            </div>
+            
+            <div className="code-repository mt-8 p-6 bg-accent/5 rounded-xl">
+              <h4 className="font-heading text-lg text-accent mb-3">Research Reproducibility</h4>
+              <p className="text-base mb-3">Complete implementation available for academic collaboration, including reproducible experiments across all six neural architectures with standardized evaluation protocols.</p>
+              <div className="repo-features text-sm grid md:grid-cols-2 gap-4">
+                <div>
+                  <strong>Available Components:</strong>
+                  <ul className="list-disc pl-5 mt-1">
+                    <li>PyTorch model implementations</li>
+                    <li>Cross-validation frameworks</li>
+                    <li>Performance benchmarking tools</li>
+                  </ul>
+                </div>
+                <div>
+                  <strong>Research Applications:</strong>
+                  <ul className="list-disc pl-5 mt-1">
+                    <li>Architecture comparison studies</li>
+                    <li>User generalization analysis</li>
+                    <li>Real-time deployment optimization</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Research Foundations - Subdued Treatment */}
-      <section className="py-24 bg-muted/30">
+      {/* Research Foundations */}
+      <section className="research-foundations py-20 bg-background">
         <div className="container">
-          <h2 className="font-heading text-3xl text-secondary text-center mb-16">Research Foundations</h2>
+          <h2 className="font-heading text-3xl text-primary text-center mb-12">Research Foundations</h2>
           
-          <div className="foundations-grid grid lg:grid-cols-2 gap-16">
+          <div className="foundations-grid grid md:grid-cols-2 gap-12">
             {/* Enhanced Vision Systems */}
             <motion.div 
               className="foundation-project"
@@ -168,46 +262,28 @@ const Research = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="font-heading text-2xl text-secondary mb-6">Enhanced Vision Systems</h3>
-              <p className="text-lg mb-8 leading-relaxed">Developed AI vision systems that enhance perception in fog, darkness, and complex environments—adapting output to human attention and cognitive load.</p>
+              <h3 className="font-heading text-2xl text-secondary mb-4">Enhanced Vision Systems</h3>
+              <p className="text-lg mb-6">Developed AI vision systems that enhance perception in fog, darkness, and complex environments—adapting output to human attention and cognitive load.</p>
               
-              <div className="research-insights mb-8">
-                <h4 className="font-heading text-lg text-primary mb-4">Key Research Insights</h4>
-                <ul className="insight-list space-y-3">
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <div><strong>Adaptive Processing:</strong> Systems that simplify visual information when users are overwhelmed or stressed</div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <div><strong>3D Information Display:</strong> Presenting complex data without cognitive overload</div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <div><strong>Multi-Spectral Integration:</strong> Layering infrared and visible light for enhanced perception</div>
-                  </li>
+              <div className="research-insights mb-6">
+                <h4 className="font-heading text-lg text-primary mb-3">Key Research Insights</h4>
+                <ul className="insight-list space-y-2">
+                  <li><strong>Adaptive Processing:</strong> Systems that simplify visual information when users are overwhelmed or stressed</li>
+                  <li><strong>3D Information Display:</strong> Presenting complex data without cognitive overload</li>
+                  <li><strong>Multi-Spectral Integration:</strong> Layering infrared and visible light for enhanced perception</li>
                 </ul>
               </div>
 
-              <button
-                onClick={() => toggleDetails('vision')}
-                className="flex items-center gap-2 text-primary font-heading hover:text-primary/80 transition-colors"
-              >
-                {openDetails === 'vision' ? <ChevronDown className="w-5 h-5" /> : <ChevronRight className="w-5 h-5" />}
-                Technical Implementation
-              </button>
-              
-              {openDetails === 'vision' && (
-                <motion.div 
-                  className="mt-4 p-6 bg-primary/5 rounded-xl"
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                >
-                  <p className="mb-4"><strong>Adaptive Enhancement:</strong> Real-time image processing algorithms that adjust based on environmental lighting and user attention patterns.</p>
-                  <p><strong>Spatial Computing:</strong> Mixed reality interfaces that present 3D information for enhanced situational awareness.</p>
-                </motion.div>
-              )}
+              <details className="technical-details">
+                <summary className="cursor-pointer text-primary font-heading flex items-center">
+                  <ChevronRight className="w-4 h-4 mr-2" />
+                  Technical Implementation
+                </summary>
+                <div className="mt-4 p-4 bg-primary/5 rounded text-sm">
+                  <p className="mb-3"><strong>Adaptive Enhancement:</strong> Real-time image processing algorithms that adjust based on environmental lighting and user attention patterns.</p>
+                  <p><strong>Spatial Computing:</strong> Mixed reality interfaces that present 3D information for enhanced situational awareness in challenging environments.</p>
+                </div>
+              </details>
             </motion.div>
 
             {/* Physiological State Detection */}
@@ -217,66 +293,48 @@ const Research = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h3 className="font-heading text-2xl text-secondary mb-6">Physiological State Monitoring</h3>
-              <p className="text-lg mb-8 leading-relaxed">Developed systems that monitor human stress, fatigue, and attention without interfering with natural behavior, learning how technology can understand our physical state to better support us.</p>
+              <h3 className="font-heading text-2xl text-secondary mb-4">Physiological State Monitoring</h3>
+              <p className="text-lg mb-6">Developed systems that monitor human stress, fatigue, and attention without interfering with natural behavior, learning how technology can understand our physical state to better support us.</p>
               
-              <div className="research-insights mb-8">
-                <h4 className="font-heading text-lg text-primary mb-4">Key Research Insights</h4>
-                <ul className="insight-list space-y-3">
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
-                    <div><strong>Multimodal Sensing:</strong> Combining heart rate, skin conductance, and motion signals for comprehensive state detection</div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
-                    <div><strong>Edge Processing:</strong> Real-time analysis without cloud dependency for immediate system adaptation</div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
-                    <div><strong>Unobtrusive Design:</strong> Sensor integration that people forget they're wearing</div>
-                  </li>
+              <div className="research-insights mb-6">
+                <h4 className="font-heading text-lg text-primary mb-3">Key Research Insights</h4>
+                <ul className="insight-list space-y-2">
+                  <li><strong>Multimodal Sensing:</strong> Combining heart rate, skin conductance, and motion signals for comprehensive state detection</li>
+                  <li><strong>Edge Processing:</strong> Real-time analysis without cloud dependency for immediate system adaptation</li>
+                  <li><strong>Unobtrusive Design:</strong> Sensor integration that users forget they're wearing</li>
                 </ul>
               </div>
 
-              <button
-                onClick={() => toggleDetails('physiological')}
-                className="flex items-center gap-2 text-secondary font-heading hover:text-secondary/80 transition-colors"
-              >
-                {openDetails === 'physiological' ? <ChevronDown className="w-5 h-5" /> : <ChevronRight className="w-5 h-5" />}
-                Technical Implementation
-              </button>
-              
-              {openDetails === 'physiological' && (
-                <motion.div 
-                  className="mt-4 p-6 bg-secondary/5 rounded-xl"
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                >
-                  <p><strong>Canary System:</strong> Helmet-mounted sensor array providing continuous physiological monitoring with machine learning algorithms for pattern recognition and predictive health alerts.</p>
-                </motion.div>
-              )}
+              <details className="technical-details">
+                <summary className="cursor-pointer text-primary font-heading flex items-center">
+                  <ChevronRight className="w-4 h-4 mr-2" />
+                  Technical Implementation
+                </summary>
+                <div className="mt-4 p-4 bg-secondary/5 rounded text-sm">
+                  <p><strong>Head-Mounted Sensor Array:</strong> Continuous physiological monitoring system with machine learning algorithms for pattern recognition and predictive health alerts, designed for long-term wear without user distraction.</p>
+                </div>
+              </details>
             </motion.div>
           </div>
 
           {/* AI Reliability Research - Condensed */}
           <motion.div 
-            className="reliability-research mt-16 p-8 bg-accent/5 rounded-2xl text-center"
+            className="reliability-research mt-12 p-6 bg-accent/5 rounded-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h3 className="font-heading text-xl text-secondary mb-4">AI Reliability Research</h3>
-            <p className="text-base max-w-4xl mx-auto">Learning to deploy AI in high-stakes environments taught me quality assurance methods now applied to ensuring emotion AI works reliably for patients who depend on it.</p>
+            <h3 className="font-heading text-xl text-secondary mb-3">AI Reliability Research</h3>
+            <p className="text-base">Experience deploying AI in precision manufacturing environments taught me quality assurance methods now applied to ensuring emotion AI works reliably for patients who depend on it—critical lessons in system reliability for clinical deployment.</p>
           </motion.div>
         </div>
       </section>
 
-      {/* Research Vision - Enhanced Prominence */}
-      <section className="py-32 bg-gradient-primary">
-        <div className="container max-w-6xl">
+      {/* Research Vision */}
+      <section className="research-vision py-20">
+        <div className="container max-w-5xl">
           <motion.h2 
-            className="font-heading text-4xl text-background text-center mb-16"
+            className="font-heading text-3xl text-primary text-center mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -285,59 +343,59 @@ const Research = () => {
           </motion.h2>
           
           <motion.div 
-            className="vision-statement text-center mb-20"
+            className="vision-statement text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <blockquote className="text-3xl md:text-4xl font-heading text-background/90 italic mb-8 leading-relaxed">
+            <blockquote className="text-2xl font-heading text-secondary italic mb-6">
               "I'm exploring how technology can become not just responsive, but emotionally literate—systems that don't just calculate, but connect — not just respond, but relate."
             </blockquote>
             
-            <p className="text-xl text-background/80 max-w-4xl mx-auto leading-relaxed">My work bridges rigorous engineering with deep human understanding. Every algorithm is tested not just for accuracy, but for reliability, cultural sensitivity, and genuine benefit to people who need technology most.</p>
+            <p className="text-lg max-w-3xl mx-auto">My work bridges rigorous engineering with deep human understanding. Every algorithm is tested not just for accuracy, but for reliability, cultural sensitivity, and genuine benefit to people who need technology most.</p>
           </motion.div>
           
           <motion.div 
-            className="future-questions mb-20"
+            className="future-questions mb-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h3 className="font-heading text-3xl text-background text-center mb-12">Questions That Drive My Research</h3>
+            <h3 className="font-heading text-2xl text-primary text-center mb-8">Questions That Drive My Research</h3>
             
-            <div className="questions-grid grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="question-card p-8 bg-background/10 backdrop-blur-sm rounded-2xl border border-background/20">
-                <h4 className="font-heading text-lg text-background mb-4">Cross-Cultural Emotion AI</h4>
-                <p className="text-base text-background/80 leading-relaxed">How do we build emotion recognition that works universally while respecting cultural differences in emotional expression?</p>
+            <div className="questions-grid grid md:grid-cols-4 gap-6">
+              <div className="question-card p-6 bg-background rounded-xl">
+                <h4 className="font-heading text-lg text-primary mb-3">Cross-Cultural Emotion AI</h4>
+                <p className="text-base">How do we build emotion recognition that works universally while respecting cultural differences in emotional expression?</p>
               </div>
               
-              <div className="question-card p-8 bg-background/10 backdrop-blur-sm rounded-2xl border border-background/20">
-                <h4 className="font-heading text-lg text-background mb-4">Privacy-Preserving AI</h4>
-                <p className="text-base text-background/80 leading-relaxed">Can we enable collaborative AI research while maintaining patient privacy through federated learning approaches?</p>
+              <div className="question-card p-6 bg-background rounded-xl">
+                <h4 className="font-heading text-lg text-primary mb-3">Privacy-Preserving AI</h4>
+                <p className="text-base">Can we enable collaborative AI research while maintaining patient privacy through federated learning approaches?</p>
               </div>
               
-              <div className="question-card p-8 bg-background/10 backdrop-blur-sm rounded-2xl border border-background/20">
-                <h4 className="font-heading text-lg text-background mb-4">Future of Human Communication</h4>
-                <p className="text-base text-background/80 leading-relaxed">What new forms of communication might emerge if technology could truly feel us back?</p>
+              <div className="question-card p-6 bg-background rounded-xl">
+                <h4 className="font-heading text-lg text-primary mb-3">Future of Human Communication</h4>
+                <p className="text-base">What new forms of communication might emerge if technology could truly feel us back?</p>
               </div>
               
-              <div className="question-card p-8 bg-background/10 backdrop-blur-sm rounded-2xl border border-background/20">
-                <h4 className="font-heading text-lg text-background mb-4">Creative Applications</h4>
-                <p className="text-base text-background/80 leading-relaxed">How might emotion-aware AI enable new forms of art or modes of shared experience?</p>
+              <div className="question-card p-6 bg-background rounded-xl">
+                <h4 className="font-heading text-lg text-primary mb-3">Creative Applications</h4>
+                <p className="text-base">How might emotion-aware AI enable new art forms or modes of shared experience?</p>
               </div>
             </div>
           </motion.div>
           
-          {/* Research Philosophy - Enhanced */}
+          {/* Research Philosophy */}
           <motion.div 
-            className="research-philosophy p-12 bg-background/15 backdrop-blur-sm rounded-3xl text-center border border-background/20"
+            className="research-philosophy p-8 bg-primary/10 rounded-2xl text-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <h3 className="font-heading text-3xl text-background mb-8">Research Philosophy</h3>
-            <p className="text-xl text-background/90 mb-6 leading-relaxed">I don't want to just publish papers. I want to build systems that actually reach the families who need them most.</p>
-            <p className="text-lg text-background/80 max-w-4xl mx-auto leading-relaxed">This means designing for reliability, accessibility, and human dignity from the ground up. My engineering background ensures research can transition from lab prototypes to real-world clinical systems.</p>
+            <h3 className="font-heading text-2xl text-primary mb-6">Research Philosophy</h3>
+            <p className="text-lg mb-4">I don't want to just publish papers. I want to build systems that actually reach the families who need them most.</p>
+            <p className="text-base">This means designing for reliability, accessibility, and human dignity from the ground up. My engineering background ensures research can transition from lab prototypes to real-world clinical systems.</p>
           </motion.div>
         </div>
       </section>
