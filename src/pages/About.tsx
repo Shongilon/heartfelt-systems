@@ -149,7 +149,7 @@ const About = () => {
                 
                 <p className="text-lg mb-6 text-muted-foreground">As <strong className="text-foreground">CTO at REACTU.io</strong>, I'm exploring how physiological signals might become a new alphabet of human expression—helping people communicate emotions when words fail.</p>
                 
-                <p className="text-lg text-muted-foreground">What if technology could let emotions travel without words? I believe the engineering discipline that creates unbreakable systems can also create <strong className="text-foreground">technology that truly understands us</strong>.</p>
+                <p className="text-lg text-muted-foreground max-w-none">What if technology could let emotions travel without words? I believe the engineering discipline that creates unbreakable systems can also create <strong className="text-foreground">technology that truly understands us</strong>.</p>
               </div>
               
               <div>
