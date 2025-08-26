@@ -65,7 +65,7 @@ const About = () => {
                 </p>
               </div>
               
-              <p className="text-lg text-muted-foreground mb-6">
+              <p className="text-lg text-muted-foreground mb-6 max-w-4xl">
                 {period.description}
               </p>
               
