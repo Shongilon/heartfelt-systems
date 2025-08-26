@@ -1,7 +1,5 @@
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import itaiWorkstation from '@/assets/itai-workstation.jpg';
-import emotionWaveformBg from '@/assets/emotion-waveform-bg.jpg';
 import safetySystems from '@/assets/safety-systems.jpg';
 import humanCenteredTransition from '@/assets/human-centered-transition.jpg';
 
@@ -23,212 +21,126 @@ const Index = () => {
       image: humanCenteredTransition,
       link: '/story'
     },
-    {
-      id: 'emotion-ai',
-      title: 'Emotion AI Research',
-      subtitle: '"What if your heartbeat could be a language?"',
-      description: 'Building AI that understands not just what you say, but how you feel.',
-      image: emotionWaveformBg,
-      link: '/research'
-    }
+      {
+        id: 'emotion-ai',
+        title: 'Emotion AI Research',
+        subtitle: 'Technical systems that understand human experience',
+        description: 'Building AI that recognizes emotional patterns in voice, creating more empathetic technology.',
+        image: itaiWorkstation,
+        link: '/research'
+      }
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        {/* Background Waveform */}
-        <div className="absolute inset-0 opacity-20">
-          <img 
-            src={emotionWaveformBg} 
-            alt="" 
-            className="w-full h-full object-cover mix-blend-multiply"
-          />
-        </div>
-        
-        {/* Main Content */}
-        <div className="relative z-10 text-center px-4">
-          {/* Headline */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="font-heading text-4xl md:text-6xl text-primary mb-8 leading-tight">
-              From Systems That Save Lives
-              <span className="block text-secondary mt-2 font-normal italic">
-                To Systems That Understand Lives
-              </span>
-            </h1>
-          </motion.div>
+      <section className="section-spacing min-h-[80vh] flex items-center justify-center">        
+        <div className="container mx-auto text-center px-4">
+          <h1 className="text-foreground mb-6 mx-auto">
+            From Systems That Save Lives
+            <span className="block text-secondary mt-4">
+              To Systems That Understand Lives
+            </span>
+          </h1>
 
-          {/* Subheadline */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            <p className="text-lg md:text-xl text-text-light mb-8 max-w-2xl mx-auto leading-relaxed">
-              15 years building technology that couldn't fail.<br />
-              Now building technology that can feel.
-            </p>
-          </motion.div>
+          <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
+            15 years building technology that couldn't fail. Now building technology that can understand human emotion through voice analysis.
+          </p>
 
-          {/* Environmental Photo */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="mb-12"
-          >
+          <div className="mb-12">
             <img 
               src={itaiWorkstation} 
-              alt="Itai working with emotion data visualizations" 
-              className="w-80 h-80 object-cover rounded-2xl mx-auto shadow-elegant"
+              alt="Research workspace with emotion AI visualizations" 
+              className="w-96 h-80 object-cover rounded-lg mx-auto shadow-card"
             />
-          </motion.div>
+          </div>
 
-          {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
-            className="mb-8"
-          >
-            <Link to="/story" className="cta-button">
-              From Code to Feelings →
-            </Link>
-          </motion.div>
-
-          {/* Interactive Demo Teaser */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
-            className="mb-12"
-          >
-            <div className="max-w-sm mx-auto bg-card/40 backdrop-blur-sm rounded-lg p-4 border border-border/30">
-              <div className="h-12 bg-gradient-to-r from-primary/20 to-accent/20 rounded-md flex items-center justify-center mb-3">
-                <div className="w-2 h-2 bg-primary rounded-full animate-pulse mr-2"></div>
-                <span className="font-mono text-xs text-text-light">Real-time emotion waveform</span>
-              </div>
-              <p className="text-xs text-text-light text-center">
-                Move your mouse to see emotion AI in action →
-              </p>
-            </div>
-          </motion.div>
+          <Link to="/about" className="cta-button">
+            Explore My Research
+          </Link>
         </div>
       </section>
 
-      {/* Story Preview Cards */}
-      <section className="py-20 bg-gradient-subtle">
+      {/* Research Areas */}
+      <section className="section-spacing bg-muted/30">
         <div className="container mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="font-heading text-4xl text-primary mb-6">
-              Three Transformations
+          <div className="text-center mb-16">
+            <h2 className="text-foreground mb-6">
+              Research Focus Areas
             </h2>
-            <p className="text-xl text-text-light max-w-3xl mx-auto">
-              The evolution from building bulletproof systems to building systems that understand bullets can't solve everything
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Three complementary research domains exploring the intersection of human emotion and technology
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {storyCards.map((card, index) => (
-              <motion.div
-                key={card.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
-                className="story-card group"
-              >
-                {/* Card Visual */}
-                <div className="aspect-video mb-6 rounded-xl overflow-hidden">
+            {storyCards.map((card) => (
+              <div key={card.id} className="research-card">
+                <div className="aspect-video mb-6 rounded-md overflow-hidden">
                   <img 
                     src={card.image} 
                     alt={card.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover"
                   />
                 </div>
 
-                <h3 className="font-heading text-2xl text-primary mb-2">
+                <h3 className="text-foreground mb-3">
                   {card.title}
                 </h3>
-                <p className="text-secondary font-medium italic mb-4">
+                <p className="text-sm text-secondary font-medium mb-4">
                   {card.subtitle}
                 </p>
-                <p className="text-foreground/80 mb-6 leading-relaxed">
+                <p className="text-muted-foreground mb-6">
                   {card.description}
                 </p>
                 
                 <Link 
                   to={card.link}
-                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors group-hover:gap-3 duration-300"
+                  className="text-primary hover:text-primary/80 font-medium transition-colors"
                 >
-                  Learn more 
-                  <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                  Learn more →
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Philosophy Teaser */}
-      <section className="py-20">
+      {/* Research Philosophy */}
+      <section className="section-spacing">
         <div className="container mx-auto max-w-4xl text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <blockquote className="text-2xl md:text-3xl font-heading text-primary mb-8 leading-relaxed">
-              "The most sophisticated AI means nothing if it can't understand 
-              a grandmother's frustration with her password."
-            </blockquote>
-            <div className="hand-underline" />
-            <div className="mt-8">
-              <Link to="/vision" className="text-secondary hover:text-secondary/80 font-medium">
-                Read my research vision →
-              </Link>
-            </div>
-          </motion.div>
+          <blockquote className="text-2xl text-foreground mb-8 mx-auto">
+            "Technology should amplify human understanding, not replace it."
+          </blockquote>
+          <div className="mt-8">
+            <Link to="/vision" className="text-primary hover:text-primary/80 font-medium">
+              Read Research Vision →
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Quick Navigation */}
-      <section className="py-16 bg-primary text-primary-foreground">
-        <div className="container mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <h3 className="font-heading text-3xl mb-8">
-              Explore My Work
-            </h3>
-            <div className="flex flex-wrap justify-center gap-6">
-              {[
-                { to: '/research', label: 'See EmotiVoice Demo' },
-                { to: '/systems', label: 'Technical Philosophy' },
-                { to: '/vision', label: 'MIT Research Plan' }
-              ].map((link) => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  className="bg-primary-foreground text-primary px-6 py-3 rounded-lg font-medium hover:bg-primary-foreground/90 transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </motion.div>
+      {/* Navigation */}
+      <section className="section-spacing bg-primary text-primary-foreground">
+        <div className="container mx-auto text-center">
+          <h3 className="text-3xl font-semibold mb-8">
+            Explore Research Areas
+          </h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            {[
+              { to: '/research', label: 'Technical Work' },
+              { to: '/about', label: 'Background' },
+              { to: '/vision', label: 'Future Plans' }
+            ].map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="bg-primary-foreground text-primary px-6 py-3 rounded-md font-medium hover:bg-primary-foreground/90 transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
     </div>

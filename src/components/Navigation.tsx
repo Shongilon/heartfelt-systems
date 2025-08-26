@@ -1,21 +1,7 @@
-import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
 
 const Navigation = () => {
-  const [scrollProgress, setScrollProgress] = useState(0);
   const location = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = (window.scrollY / totalHeight) * 100;
-      setScrollProgress(Math.min(progress, 100));
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navLinks = [
     { to: '/', label: 'Home', id: 'home' },
@@ -32,24 +18,20 @@ const Navigation = () => {
   };
 
   return (
-    <motion.header 
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="sticky top-0 z-50 bg-background/90 backdrop-blur-sm border-b border-border"
-    >
-      <nav className="container mx-auto flex justify-between items-center py-4">
+    <header className="sticky top-0 z-50 bg-background border-b border-border">
+      <nav className="container mx-auto flex justify-between items-center py-6">
         {/* Logo/Name */}
-        <Link to="/" className="flex items-center gap-3">
-          <div className="font-heading text-xl text-primary">
+        <Link to="/" className="flex items-center gap-4">
+          <div className="text-2xl font-bold text-foreground">
             Itai Katz
           </div>
-          <span className="font-hand text-secondary italic">
-            systems → emotions
+          <span className="systems-arrow text-sm">
+            systems emotions
           </span>
         </Link>
 
         {/* Navigation Links */}
-        <ul className="hidden md:flex space-x-8 font-body">
+        <ul className="hidden md:flex space-x-8">
           {navLinks.map((link) => (
             <li key={link.id}>
               <Link
@@ -62,22 +44,14 @@ const Navigation = () => {
           ))}
         </ul>
 
-        {/* Progress Indicator */}
-        <div className="hidden md:block w-16 h-1 bg-border rounded-full overflow-hidden">
-          <div 
-            className="h-full bg-accent rounded-full transition-all duration-300 ease-smooth"
-            style={{ width: `${scrollProgress}%` }}
-          />
-        </div>
-
         {/* Mobile Menu Button */}
-        <button className="md:hidden p-2 text-foreground hover:text-primary transition-colors">
+        <button className="md:hidden p-2 text-muted-foreground hover:text-foreground transition-colors">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
       </nav>
-    </motion.header>
+    </header>
   );
 };
 
