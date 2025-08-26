@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 const Vision = () => {
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
   const researchQuestions = [
     {
       question: 'Can AI recognize sadness in Hebrew the same way it does in English?',
@@ -38,135 +39,98 @@ const Vision = () => {
   ];
 
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen section-spacing">
       <div className="container mx-auto max-w-6xl">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-20"
-        >
-          <h1 className="font-heading text-5xl text-primary mb-6">
+        <div className="text-center mb-20">
+          <h1 className="text-foreground mb-6">
             Research Vision & Future Directions
           </h1>
-          <p className="text-xl text-text-light max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             How 15+ years of systems engineering can advance emotion AI research and clinical deployment
           </p>
-        </motion.div>
+        </div>
 
         {/* Research Questions */}
-        <div className="space-y-12 mb-20">
+        <div className="space-y-8 mb-20">
           {researchQuestions.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
-              className="bg-card rounded-2xl p-8 shadow-card hover:shadow-elegant transition-all duration-300"
-            >
-              <h3 className="font-heading text-2xl text-primary mb-6 leading-relaxed">
+            <div key={index} className="research-card">
+              <h3 className="text-2xl text-foreground mb-6">
                 {item.question}
               </h3>
               <div className="space-y-4">
                 <div>
                   <h4 className="font-medium text-secondary mb-2">The Challenge:</h4>
-                  <p className="text-foreground/80 text-lg">{item.challenge}</p>
+                  <p className="text-muted-foreground text-lg">{item.challenge}</p>
                 </div>
                 <div>
-                  <h4 className="font-medium text-accent mb-2">My Vision:</h4>
-                  <p className="text-foreground/80 text-lg">{item.vision}</p>
+                  <h4 className="font-medium text-secondary mb-2">My Vision:</h4>
+                  <p className="text-muted-foreground text-lg">{item.vision}</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Research Trajectory */}
-        <motion.section
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="py-20 bg-gradient-subtle rounded-3xl px-8 mb-20"
-        >
-          <div className="max-w-4xl mx-auto">
-            <h3 className="font-heading text-3xl text-primary mb-12 text-center">
-              My Research Trajectory
+        <section className="section-spacing bg-muted/30 rounded-lg px-8 mb-20">
+          <div className="max-w-4xl mx-auto text-center">
+            <h3 className="text-foreground mb-12">
+              My Research Trajectory  
             </h3>
             
             <div className="space-y-8">
               {timelineItems.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.3 }}
-                  className="flex items-center gap-6"
-                >
-                  <div className={`${item.color} text-background font-heading text-lg px-4 py-2 rounded-full min-w-fit`}>
+                <div key={index} className="flex items-center gap-6">
+                  <div className={`${item.color} text-primary-foreground font-semibold text-lg px-4 py-2 rounded-md min-w-fit`}>
                     {item.year}
                   </div>
-                  <div className="flex-1">
-                    <p className="text-lg">{item.goal}</p>
+                  <div className="flex-1 text-left">
+                    <p className="text-lg text-muted-foreground">{item.goal}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-            
-            <div className="text-center mt-12">
-              <div className="hand-underline mx-auto" />
-            </div>
           </div>
-        </motion.section>
+        </section>
 
         {/* Research Philosophy */}
-        <motion.section
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
+        <section className="mb-20">
           <div className="max-w-4xl mx-auto">
-            <h3 className="font-heading text-3xl text-primary mb-8">
+            <h3 className="text-foreground mb-8">
               My Research Philosophy
             </h3>
-            <div className="space-y-6 text-lg leading-relaxed">
-              <p>
+            <div className="space-y-6 text-lg">
+              <p className="text-muted-foreground">
                 I believe the most meaningful research happens at the intersection of technical rigor 
                 and human need. My 15+ years building mission-critical systems taught me that 
                 breakthrough technology means nothing if it fails when people need it most.
               </p>
-              <p>
+              <p className="text-muted-foreground">
                 This drives my commitment to emotion AI research that doesn't just advance the field 
                 theoretically, but actually reaches the families who need it. I want to help a child 
                 with autism communicate their feelings, enable someone with ALS to maintain their 
                 emotional voice, and build AI that respects both accuracy and privacy.
               </p>
-              <p>
+              <p className="text-muted-foreground">
                 My background gives me a unique perspective: I know how to build technology that works 
                 reliably in the real world, and I understand the human cost when systems fail. This is 
                 the reliability standard I want to bring to academic research.
               </p>
             </div>
             
-            <div className="bg-primary/5 rounded-2xl p-8 mt-8">
-              <blockquote className="text-xl font-heading text-primary italic">
+            <div className="research-card mt-8">
+              <blockquote className="text-xl text-foreground text-center">
                 "I don't want to just publish papers. I want to build systems that actually reach 
                 the families who need them most."
               </blockquote>
             </div>
           </div>
-        </motion.section>
+        </section>
 
         {/* Post-Graduation Impact Vision */}
-        <motion.section
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <h3 className="font-heading text-3xl text-primary mb-8">
+        <section className="text-center">
+          <h3 className="text-foreground mb-8">
             Beyond Research
           </h3>
           
@@ -179,8 +143,8 @@ const Vision = () => {
                 'Global Impact'
               ].map((step, index) => (
                 <div key={step} className="flex items-center">
-                  <div className="bg-card border-2 border-primary rounded-xl p-4 w-full">
-                    <div className="font-heading text-lg text-primary">{step}</div>
+                  <div className="research-card w-full text-center">
+                    <div className="font-semibold text-lg text-foreground">{step}</div>
                   </div>
                   {index < 3 && (
                     <div className="hidden md:block text-primary text-2xl mx-4">→</div>
@@ -190,15 +154,11 @@ const Vision = () => {
             </div>
           </div>
           
-          <blockquote className="text-xl font-heading text-secondary max-w-3xl mx-auto">
+          <blockquote className="text-xl text-secondary max-w-3xl mx-auto">
             "I don't want to just publish papers. I want to build systems that actually reach 
             the families who need them."
           </blockquote>
-          
-          <div className="mt-8">
-            <div className="hand-underline mx-auto" />
-          </div>
-        </motion.section>
+        </section>
 
       </div>
     </div>
