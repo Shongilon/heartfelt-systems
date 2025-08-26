@@ -35,17 +35,17 @@ const Navigation = () => {
     <motion.header 
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="sticky top-0 z-50 bg-background/90 backdrop-blur-sm border-b border-border"
+      className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm"
     >
-      <nav className="container mx-auto flex justify-between items-center py-4">
-        {/* Logo/Name */}
-        <Link to="/" className="flex items-center gap-3">
-          <div className="font-heading text-xl text-primary">
+      <nav className="container mx-auto flex justify-between items-center py-6">
+        {/* Logo/Name - Professional Clean Layout */}
+        <Link to="/" className="flex flex-col">
+          <div className="brand-name">
             Itai Katz
           </div>
-          <span className="font-hand text-secondary italic">
+          <div className="brand-tagline">
             systems → emotions
-          </span>
+          </div>
         </Link>
 
         {/* Navigation Links */}

@@ -5,10 +5,10 @@ const Research = () => {
   return (
     <div className="min-h-screen">
       {/* Research Hero */}
-      <section className="research-hero py-16">
+      <section className="research-hero py-20 bg-gradient-subtle">
         <div className="container text-center">
           <motion.h1 
-            className="font-heading text-4xl text-primary mb-4"
+            className="text-h1 text-foreground mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -16,7 +16,7 @@ const Research = () => {
             Research Portfolio
           </motion.h1>
           <motion.p 
-            className="text-lg text-text-light max-w-2xl mx-auto"
+            className="text-body-lg text-text-light max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -27,27 +27,27 @@ const Research = () => {
       </section>
 
       {/* Research Overview */}
-      <section className="research-overview py-12 bg-primary/5">
-        <div className="container max-w-4xl">
+      <section className="research-overview py-16 bg-muted/30">
+        <div className="container max-w-5xl">
           <motion.div 
-            className="overview-box p-8 bg-background rounded-2xl"
+            className="overview-card bg-background rounded-2xl shadow-card p-10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h2 className="font-heading text-2xl text-primary mb-4">Research Focus Summary</h2>
-            <div className="grid md:grid-cols-3 gap-6 text-sm">
-              <div>
-                <h3 className="font-heading text-base text-secondary mb-2">Primary Focus</h3>
-                <p>Emotion AI for assistive communication using physiological signals</p>
+            <h2 className="text-h2 text-foreground text-center mb-8">Research Focus Summary</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="focus-card p-6 bg-muted/50 rounded-xl">
+                <h3 className="text-h4 text-foreground mb-3">Primary Focus</h3>
+                <p className="text-body text-text-light">Emotion AI for assistive communication using physiological signals</p>
               </div>
-              <div>
-                <h3 className="font-heading text-base text-secondary mb-2">Key Contributions</h3>
-                <p>Multi-modal sensor fusion, cross-subject generalization framework, ~94% preliminary accuracy</p>
+              <div className="focus-card p-6 bg-muted/50 rounded-xl">
+                <h3 className="text-h4 text-foreground mb-3">Key Contributions</h3>
+                <p className="text-body text-text-light">Multi-modal sensor fusion, cross-subject generalization framework, ~94% preliminary accuracy</p>
               </div>
-              <div>
-                <h3 className="font-heading text-base text-secondary mb-2">Research Vision</h3>
-                <p>Emotion as communication medium, not just classification target</p>
+              <div className="focus-card p-6 bg-muted/50 rounded-xl">
+                <h3 className="text-h4 text-foreground mb-3">Research Vision</h3>
+                <p className="text-body text-text-light">Emotion as communication medium, not just classification target</p>
               </div>
             </div>
           </motion.div>
