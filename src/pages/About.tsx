@@ -96,8 +96,8 @@ const About = () => {
 
         {/* Mission Statement */}
         <section className="section-spacing bg-muted/30 rounded-lg px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <blockquote className="text-2xl text-foreground mb-8 mx-auto">
+          <div className="text-center max-w-5xl mx-auto">
+            <blockquote className="text-2xl text-foreground mb-8 mx-auto max-w-none">
               "I believe the most sophisticated AI means nothing if it doesn't understand 
               a grandmother's frustration with her password, or a child's excitement about 
               a new discovery, or the subtle sadness in a voice when someone says they're 'fine.'"
