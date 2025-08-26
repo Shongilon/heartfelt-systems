@@ -140,10 +140,10 @@ const About = () => {
 
         {/* Profile Section */}
         <section className="section-spacing bg-muted/30 rounded-lg px-8">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <h3 className="text-foreground mb-8 text-center">From Systems Engineering to Emotion AI</h3>
             
-            <div className="grid md:grid-cols-2 gap-12 mb-16">
+            <div className="grid lg:grid-cols-2 gap-12 mb-16">
               <div>
                 <p className="text-lg mb-6 text-muted-foreground">I'm a systems engineer who spent 15+ years building technology for extreme reliability—from navigation systems to augmented reality platforms. Now I explore what happens when that same rigor meets human emotion.</p>
                 
