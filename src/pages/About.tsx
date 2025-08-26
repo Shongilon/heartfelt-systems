@@ -33,8 +33,8 @@ const About = () => {
       description: '"What if your heartbeat could be a language?"',
       details: [
         "Founded research into emotion recognition technology",
-        "Built EmotiVoice for ALS communication",
-        "Proved that privacy and emotion AI can coexist"
+        "Built REACTU for ALS communication assistance",
+        "Developed privacy-first physiological emotion detection"
       ]
     }
   ];
