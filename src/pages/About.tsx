@@ -132,7 +132,7 @@ const About = () => {
                   className="text-primary hover:text-primary/80 transition-colors"
                 >
                   See my professional journey
-                </a> from defense systems to emotion AI research.
+                </a> from aerospace systems to emotion AI research.
               </div>
             </div>
           </div>
