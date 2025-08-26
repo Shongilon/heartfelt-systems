@@ -54,7 +54,7 @@ const Index = () => {
               <img 
                 src="/lovable-uploads/bd68fa1a-9211-47f4-b330-7826df11dd2d.png" 
                 alt="Itai Katz - AI Research Engineer" 
-                className="relative w-80 h-80 object-cover rounded-2xl shadow-2xl border-2 border-white/10"
+                className="relative w-96 h-80 object-cover rounded-2xl shadow-2xl border-2 border-white/10"
               />
             </div>
           </div>
