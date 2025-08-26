@@ -147,35 +147,35 @@ const Research = () => {
               </div>
               
               <div className="current-status p-6 bg-background rounded-xl mb-8">
-                <h4 className="font-heading text-lg text-secondary mb-3">Development Status & Technical Implementation</h4>
-                <p className="text-base mb-4">Currently in active development with biosensor integration targeting Q2 2025. Comprehensive neural architecture evaluation completed with rigorous cross-validation methodology demonstrating model generalizability.</p>
+                <h4 className="font-heading text-lg text-secondary mb-3">Current Research Status</h4>
+                <p className="text-base mb-4">Multi-modal biosensor system in active development, with comprehensive neural architecture evaluation completed. Rigorous validation methodology demonstrates promising generalizability across diverse users.</p>
                 
-                <div className="code-availability mb-4 p-4 bg-primary/5 rounded">
-                  <h5 className="font-semibold text-primary mb-2">Open Research Implementation</h5>
-                  <p className="text-sm mb-2">Complete source code available for architecture comparison study, including:</p>
-                  <ul className="text-sm list-disc pl-5 space-y-1">
-                    <li>PyTorch implementations of all six neural architectures</li>
-                    <li>Data preprocessing pipelines for physiological signals</li>
-                    <li>Leave-One-Subject-Out cross-validation framework</li>
-                    <li>Performance evaluation metrics and visualization tools</li>
-                    <li>Ensemble method implementations and model fusion strategies</li>
-                  </ul>
-                </div>
+                <details className="technical-implementation">
+                  <summary className="cursor-pointer text-primary font-heading flex items-center mb-2">
+                    <ChevronRight className="w-4 h-4 mr-2" />
+                    Technical Implementation Details
+                  </summary>
+                  <div className="p-4 bg-primary/5 rounded text-sm">
+                    <div className="mb-3"><strong>Datasets Validated:</strong> DEAP, DREAMER, MAHNOB-HCI, AMIGOS, ASCERTAIN, SEMAINE</div>
+                    <div className="mb-3"><strong>Architectures Compared:</strong> CNN-LSTM, CRBENN, WaveNet, Transformers, GameEmo-CapsNet, Ensemble Methods</div>
+                    <div><strong>Validation Methodology:</strong> Two-stage approach with Leave-One-Subject-Out cross-validation ensuring new-user generalizability</div>
+                  </div>
+                </details>
                 
-                <div className="roadmap-highlights text-sm">
-                  <strong>Next Technical Milestones:</strong>
+                <div className="roadmap-highlights text-sm mt-4">
+                  <strong>Research Milestones:</strong>
                   <ul className="list-disc pl-5 mt-2 space-y-1">
-                    <li>Complete 500+ session labeled dataset across diverse populations</li>
-                    <li>Achieve &lt;500ms latency on edge processing devices</li>
-                    <li>Deploy top-performing architecture on Shimmer biosensor hardware</li>
-                    <li>Begin pilot studies at major rehabilitation centers</li>
+                    <li>Complete emotion-labeled dataset across 500+ sessions</li>
+                    <li>Deploy real-time processing on Shimmer biosensor hardware</li>
+                    <li>Begin collaborative studies at rehabilitation centers</li>
+                    <li>Validate cross-cultural emotion recognition approaches</li>
                   </ul>
                 </div>
               </div>
 
               <div className="competitive-advantage p-6 bg-accent/5 rounded-xl">
-                <h4 className="font-heading text-lg text-accent mb-3">Unique Market Position</h4>
-                <p className="text-base">Only solution combining non-invasive biosensors with AI specifically designed for medical communication applications. Existing assistive devices provide basic yes/no responses, while emotion AI companies focus on consumer applications rather than clinical needs.</p>
+                <h4 className="font-heading text-lg text-accent mb-3">Research Gap We're Addressing</h4>
+                <p className="text-base">Existing assistive devices provide only binary yes/no communication, while emotion AI companies focus on consumer applications. My research explores whether emotional nuance can be restored for clinical communication—something not addressed in current systems.</p>
               </div>
             </motion.div>
           </div>
@@ -349,7 +349,7 @@ const Research = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <blockquote className="text-2xl font-heading text-secondary italic mb-6">
-              "I'm exploring how technology can become not just responsive, but emotionally literate—systems that don't just calculate, but connect — not just respond, but relate."
+              "I'm exploring how technology can become emotionally literate. Systems that don't just calculate, but connect—not just respond, but relate."
             </blockquote>
             
             <p className="text-lg max-w-3xl mx-auto">My work bridges rigorous engineering with deep human understanding. Every algorithm is tested not just for accuracy, but for reliability, cultural sensitivity, and genuine benefit to people who need technology most.</p>
