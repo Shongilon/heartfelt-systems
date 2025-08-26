@@ -21,7 +21,7 @@ const About = () => {
       subtitle: '2015-2020',
       description: '"Technology should serve people, not missions."',
       details: [
-        "Shifted from military to civilian applications",
+        "Shifted from aerospace to civilian applications",
         "Started focusing on user experience in high-stress environments",
         "Realized that the best interface adapts to human limitations"
       ]
