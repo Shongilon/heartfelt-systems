@@ -231,8 +231,8 @@ const Research = () => {
             </details>
           </div>
 
-          <div className="mt-8 text-center p-4 bg-secondary/5 rounded">
-            <p className="text-sm text-muted-foreground"><strong>Additional Experience:</strong> AI reliability research in precision manufacturing environments, informing quality assurance methods for clinical emotion AI deployment.</p>
+          <div className="mt-8 text-center p-6 bg-secondary/5 rounded">
+            <p className="text-base text-muted-foreground text-center"><strong>Additional Experience:</strong> AI reliability research in precision manufacturing environments, informing quality assurance methods for clinical emotion AI deployment.</p>
           </div>
         </div>
       </section>
