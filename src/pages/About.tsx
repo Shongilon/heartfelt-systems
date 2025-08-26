@@ -97,7 +97,7 @@ const About = () => {
         {/* Mission Statement */}
         <section className="section-spacing bg-muted/30 rounded-lg px-8">
           <div className="text-center max-w-4xl mx-auto">
-            <blockquote className="text-2xl text-foreground mb-8 mx-auto max-w-5xl">
+            <blockquote className="text-2xl text-foreground mb-8 mx-auto max-w-4xl">
               "I believe the most sophisticated AI means nothing if it doesn't understand 
               a grandmother's frustration with her password, or a child's excitement about 
               a new discovery, or the subtle sadness in a voice when someone says they're 'fine.'"
@@ -117,7 +117,7 @@ const About = () => {
                 while being incredibly intelligent. This moment made me realize: we're building AI that talks, 
                 but not AI that truly communicates.
               </p>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground max-w-3xl">
                 Emotion-aware technology isn't just an academic curiosity—it's personally urgent. After 15 years 
                 in systems engineering, I've learned that the real frontier isn't making machines faster or more reliable, 
                 but making them truly understand us. My work now focuses on building technology that enhances human 
