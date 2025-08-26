@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import itaiPortrait from '@/assets/itai-portrait.png';
 import itaiWorkstation from '@/assets/itai-workstation.jpg';
 import safetySystems from '@/assets/safety-systems.jpg';
 import humanCenteredTransition from '@/assets/human-centered-transition.jpg';
@@ -47,12 +48,15 @@ const Index = () => {
             15 years building technology that couldn't fail. Now building technology that can understand human emotion through voice analysis.
           </p>
 
-          <div className="mb-12">
-            <img 
-              src={itaiWorkstation} 
-              alt="Research workspace with emotion AI visualizations" 
-              className="w-96 h-80 object-cover rounded-lg mx-auto shadow-card"
-            />
+          <div className="mb-12 flex justify-center">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl blur-xl transform rotate-1"></div>
+              <img 
+                src="/lovable-uploads/bd68fa1a-9211-47f4-b330-7826df11dd2d.png" 
+                alt="Itai Katz - AI Research Engineer" 
+                className="relative w-80 h-80 object-cover rounded-2xl shadow-2xl border-2 border-white/10"
+              />
+            </div>
           </div>
 
           <Link to="/about" className="cta-button">
