@@ -26,7 +26,7 @@ const Navigation = () => {
             Itai Katz
           </div>
           <span className="systems-arrow text-sm">
-            systems emotions
+            system → emotions
           </span>
         </Link>
 

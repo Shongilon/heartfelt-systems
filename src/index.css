@@ -151,16 +151,11 @@ All colors MUST be HSL.
   }
   
   .systems-arrow {
-    @apply inline-flex items-center text-secondary font-medium;
+    @apply inline-flex items-center text-secondary font-medium tracking-wider;
   }
   
-  .systems-arrow::after {
-    content: "→";
-    @apply ml-2 transition-transform;
-  }
-  
-  .systems-arrow:hover::after {
-    @apply translate-x-1;
+  .systems-arrow:hover {
+    @apply text-primary transition-colors duration-300;
   }
 
   /* Social and link styles */
