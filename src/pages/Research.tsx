@@ -40,19 +40,23 @@ const Research = () => {
 
       {/* REACTU Research */}
       <section className="section-spacing">
-        <div className="container">
-          <div className="mb-16">
-            <h2 className="text-foreground mb-4">
+        <div className="container max-w-5xl">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-foreground mb-6 tracking-tight">
               REACTU: AI for Emotional Communication
-            </h2>
-            <p className="text-lg text-secondary mb-8">
+            </h1>
+            <p className="text-xl text-secondary leading-relaxed max-w-4xl mx-auto font-medium">
               Developing novel approaches to translate physiological signals into emotional expression for people with communication barriers
             </p>
-            
-            <div className="research-card bg-secondary/10 mb-12">
-              <h3 className="text-2xl text-secondary mb-4">Research Focus</h3>
-              <p className="text-lg text-muted-foreground">Can AI reliably infer human emotions directly from physiological signals? I'm exploring multi-modal biosensor approaches for people with preserved cognition but communication barriers—starting with ALS patients, locked-in syndrome, and severe stroke survivors.</p>
-            </div>
+          </div>
+          
+          <div className="research-card bg-gradient-to-br from-secondary/10 to-secondary/5 border border-secondary/20 mb-16 p-8">
+            <h2 className="text-3xl font-semibold text-secondary mb-6">Research Focus</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Can AI reliably infer human emotions directly from physiological signals? I'm exploring 
+              multi-modal biosensor approaches for people with preserved cognition but communication 
+              barriers—starting with ALS patients, locked-in syndrome, and severe stroke survivors.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-16">
