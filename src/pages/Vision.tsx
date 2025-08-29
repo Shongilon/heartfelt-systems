@@ -1,4 +1,5 @@
 const Vision = () => {
+  // Academic research areas for vision page
   const researchAreas = [
     {
       title: 'Cross-Cultural Emotion Recognition Systems',
