@@ -8,79 +8,81 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Modern Academic Color System */
-    --primary: 227 76% 51%; /* Blue accent for CTAs and links */
-    --secondary: 0 72% 41%; /* Burgundy for subtle emphasis */
+    /* MIT Media Lab Dark Theme - Turquoise Accent System */
+    --primary: 174 100% 50%; /* Turquoise for headers and CTAs */
+    --primary-glow: 180 100% 75%; /* Lighter turquoise for glow effects */
+    --secondary: 180 100% 40%; /* Dark turquoise for subtle emphasis */
     
-    /* Pure Neutral System */
-    --background: 0 0% 100%; /* Pure white */
-    --foreground: 0 0% 9%; /* Near black for maximum readability */
-    --muted-foreground: 0 0% 45%; /* Medium gray for secondary text */
+    /* Dark Background System */
+    --background: 0 0% 4%; /* Deep black background */
+    --foreground: 0 0% 98%; /* Pure white text */
+    --text-light: 0 0% 88%; /* Light gray for secondary text */
+    --muted-foreground: 0 0% 65%; /* Medium gray for tertiary text */
     
-    /* Component Tokens */
+    /* Component Tokens - Dark Theme */
+    --card: 0 0% 7%; /* Slightly lighter black for cards */
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 98%;
+    --primary-foreground: 0 0% 4%; /* Dark text on turquoise */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 12%; /* Dark gray for muted areas */
+    --accent: 0 0% 12%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%; /* Subtle dark border */
+    --input: 0 0% 12%; /* Dark input backgrounds */
+    --ring: 174 100% 50%; /* Turquoise focus ring */
+    --radius: 0.5rem;
+    
+    /* Sidebar tokens - Dark */
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 174 100% 50%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 174 100% 50%;
+    
+    /* Enhanced Shadows with Glow */
+    --shadow-card: 0 4px 12px -4px hsl(0 0% 0% / 0.3);
+    --shadow-elegant: 0 10px 30px -10px hsl(174 100% 50% / 0.15);
+    --shadow-glow: 0 0 20px hsl(174 100% 50% / 0.2);
+    --shadow-subtle: 0 2px 8px hsl(0 0% 0% / 0.2);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(174 100% 50%), hsl(180 100% 40%));
+    --gradient-secondary: linear-gradient(135deg, hsl(0 0% 7%), hsl(0 0% 12%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 4%), hsl(0 0% 7%));
+    
+    /* Smooth Animations */
+    --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Legacy light theme - kept for compatibility but not used by default */
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 9%;
+    --primary: 174 100% 50%;
     --primary-foreground: 0 0% 100%;
+    --secondary: 0 72% 41%;
     --secondary-foreground: 0 0% 100%;
     --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
     --accent: 0 0% 96%;
     --accent-foreground: 0 0% 9%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 227 76% 51%;
-    --radius: 0.5rem;
-    
-    /* Sidebar tokens */
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 0 0% 9%;
-    --sidebar-primary: 227 76% 51%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 96%;
-    --sidebar-accent-foreground: 0 0% 9%;
-    --sidebar-border: 0 0% 90%;
-    --sidebar-ring: 227 76% 51%;
-    
-    /* Clean Shadows */
-    --shadow-card: 0 2px 8px -2px hsl(0 0% 0% / 0.08);
-    --shadow-subtle: 0 1px 3px hsl(0 0% 0% / 0.1);
-    
-    /* Minimal Animations */
-    --transition-base: all 0.2s ease-out;
-  }
-
-  .dark {
-    --background: 213 25% 8%;
-    --foreground: 0 0% 98%;
-    --card: 213 25% 8%;
-    --card-foreground: 0 0% 98%;
-    --popover: 213 25% 8%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 230 89% 74%;
-    --primary-foreground: 213 25% 8%;
-    --secondary: 217 32% 17%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 217 32% 17%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 217 32% 17%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 217 32% 17%;
-    --input: 217 32% 17%;
-    --ring: 230 89% 74%;
-    
-    --sidebar-background: 213 25% 8%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 230 89% 74%;
-    --sidebar-primary-foreground: 213 25% 8%;
-    --sidebar-accent: 217 32% 17%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 217 32% 17%;
-    --sidebar-ring: 230 89% 74%;
+    --ring: 174 100% 50%;
   }
 }
 
@@ -126,24 +128,31 @@ All colors MUST be HSL.
     max-width: 65ch;
   }
   
-  /* Professional Components */
+  /* MIT Media Lab Dark Theme Components */
   .nav-link {
-    @apply text-muted-foreground hover:text-foreground transition-colors;
+    @apply text-text-light hover:text-primary transition-all duration-300;
     @apply font-medium;
   }
   
   .nav-link.active {
-    @apply text-foreground font-semibold;
+    @apply text-primary font-semibold;
+    text-shadow: 0 0 8px hsl(var(--primary) / 0.5);
   }
   
   .cta-button {
     @apply inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground;
-    @apply font-semibold rounded-lg hover:bg-primary/90 transition-colors;
+    @apply font-semibold rounded-lg transition-all duration-300;
+    @apply hover:shadow-glow hover:scale-105;
+    box-shadow: 0 0 0 hsl(var(--primary) / 0.3);
+  }
+  
+  .cta-button:hover {
+    box-shadow: var(--shadow-glow);
   }
   
   .research-card {
-    @apply bg-card border border-border rounded-lg p-6 transition-shadow;
-    @apply hover:shadow-card;
+    @apply bg-card border border-border rounded-lg p-6 transition-all duration-300;
+    @apply hover:shadow-elegant hover:border-primary/30 hover:-translate-y-1;
   }
   
   .section-spacing {
@@ -151,23 +160,65 @@ All colors MUST be HSL.
   }
   
   .systems-arrow {
-    @apply inline-flex items-center text-secondary font-medium tracking-wider;
+    @apply inline-flex items-center text-text-light font-medium tracking-wider;
+    @apply hover:text-primary transition-all duration-300;
   }
   
   .systems-arrow:hover {
-    @apply text-primary transition-colors duration-300;
+    text-shadow: 0 0 8px hsl(var(--primary) / 0.6);
   }
 
-  /* Social and link styles */
+  /* Enhanced link styles with glow effects */
   .social-link {
-    @apply flex items-center text-text-light hover:text-primary transition-colors duration-200;
+    @apply flex items-center text-text-light hover:text-primary transition-all duration-300;
+  }
+  
+  .social-link:hover {
+    text-shadow: 0 0 8px hsl(var(--primary) / 0.5);
   }
 
   .code-link {
-    @apply border-b border-transparent hover:border-secondary transition-colors duration-200;
+    @apply border-b border-transparent hover:border-primary transition-all duration-300;
+    @apply hover:text-primary;
+  }
+  
+  .code-link:hover {
+    text-shadow: 0 0 6px hsl(var(--primary) / 0.4);
   }
 
   .inline-link {
-    @apply text-secondary hover:text-primary border-b border-secondary/30 hover:border-primary/30 transition-all duration-200;
+    @apply text-text-light hover:text-primary border-b border-text-light/30 hover:border-primary/80 transition-all duration-300;
+  }
+  
+  .inline-link:hover {
+    text-shadow: 0 0 6px hsl(var(--primary) / 0.4);
+  }
+  
+  /* Gradient text effects for headers */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Enhanced card hover effects */
+  .story-card {
+    @apply transition-all duration-300 hover:shadow-elegant hover:-translate-y-2;
+    @apply hover:border-primary/40;
+  }
+  
+  /* Glow animation for interactive elements */
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% { 
+      box-shadow: 0 0 5px hsl(var(--primary) / 0.3);
+    }
+    50% { 
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.6);
+    }
   }
 }
