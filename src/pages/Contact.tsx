@@ -103,6 +103,7 @@ const Contact = () => {
                 <li>Privacy-preserving federated learning</li>
                 <li>Clinical-grade AI for assistive technology</li>
                 <li>Real-time multimodal signal processing</li>
+                <li>Time series classification (TSC)</li>
               </ul>
             </div>
 

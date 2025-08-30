@@ -219,7 +219,7 @@ const Resume = () => {
           <div className="bg-muted/30 border border-border rounded-lg p-5">
             <h3 className="font-bold text-foreground mb-3">AI & Machine Learning</h3>
             <div className="text-muted-foreground text-sm leading-relaxed">
-              Python (PyTorch, NumPy, SciPy, Pandas), Neural Networks, Computer Vision, Time Series Analysis, Signal Processing, Emotion Recognition, Multimodal AI Systems
+              Python (PyTorch, NumPy, SciPy, Pandas), Neural Networks, Computer Vision, Time Series Analysis, Time Series Classification (TSC), Signal Processing, Emotion Recognition, Multimodal AI Systems
             </div>
           </div>
           <div className="bg-muted/30 border border-border rounded-lg p-5">
