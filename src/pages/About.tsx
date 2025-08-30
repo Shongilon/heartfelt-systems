@@ -39,9 +39,24 @@ const About = () => {
       subtitle: '2008-2018',
       description: '"I thought perfect code made perfect systems—until users broke every assumption"',
       details: [
-        "Led development of mission-critical aviation systems",
-        "Established expertise in DO-178C and safety-critical standards",
-        "Discovered the gap between technical perfection and human reality"
+        "Led development of avionics systems under DO-178C certification, designing architectures with sub-millisecond timing guarantees and fault-tolerant redundancy",
+        "Integrated RiskMinOFN algorithms and SLAD sensor fusion systems to ensure reliability in life-critical flight environments",
+        "Established expertise in safety-critical software where interface failures directly impact pilot survival",
+        "",
+        "**Degraded Visual Environment Research (2010-2018)**",
+        "Directed technical development for multi-year research program on pilot cueing systems for low-visibility rotorcraft operations.",
+        "",
+        "Advanced human-computer interaction models for safety-critical conditions, focusing on display latency thresholds and multimodal cue integration",
+        "Developed adaptive risk assessment algorithms that adjusted warnings based on flight context to prevent false alarms while maintaining safety margins",
+        "Conducted validation experiments demonstrating improved pilot situational awareness in brownout, fog, and night flight conditions",
+        "",
+        "**Research Contributions**",
+        "",
+        "Technical innovations: Timing-constrained architectures, adaptive risk-minimization algorithms, real-time sensor fusion processing",
+        "Human factors insights: Cognitive load reduction methodologies, multimodal cueing effectiveness in high-stress environments",
+        "Research impact: Peer-reviewed publications, technology transition to operational aircraft programs",
+        "",
+        "Published Research: \"The Design of Pilot Cueing for the Degraded Visual Environment Mitigation (DVE-M) System for Rotorcraft\" - Vertical Flight Society Forum, 2021"
       ]
     },
     {
@@ -114,12 +129,31 @@ const About = () => {
               {expandedPeriod === period.id && (
                 <div className="mt-6 pt-6 border-t border-border">
                   <ul className="space-y-3">
-                    {period.details.map((detail, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-secondary rounded-full mt-3 flex-shrink-0" />
-                        <p className="text-muted-foreground">{detail}</p>
-                      </li>
-                    ))}
+                    {period.details.map((detail, i) => {
+                      // Handle empty strings as spacing
+                      if (detail === "") {
+                        return <li key={i} className="h-2" />;
+                      }
+                      
+                      // Handle bold markdown formatting
+                      if (detail.startsWith("**") && detail.endsWith("**")) {
+                        const boldText = detail.slice(2, -2);
+                        return (
+                          <li key={i} className="flex items-start gap-3">
+                            <div className="w-2 h-2 bg-secondary rounded-full mt-3 flex-shrink-0" />
+                            <h5 className="text-foreground font-semibold">{boldText}</h5>
+                          </li>
+                        );
+                      }
+                      
+                      // Regular text
+                      return (
+                        <li key={i} className="flex items-start gap-3">
+                          <div className="w-2 h-2 bg-secondary rounded-full mt-3 flex-shrink-0" />
+                          <p className="text-muted-foreground">{detail}</p>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               )}
