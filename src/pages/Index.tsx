@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import itaiPortrait from '@/assets/itai-portrait.png';
 import itaiWorkstation from '@/assets/itai-workstation.jpg';
-import safetySystems from '@/assets/safety-systems.jpg';
+import aviationHUD from '@/assets/aviation-hud-display.png';
 import humanCenteredTransition from '@/assets/human-centered-transition.jpg';
 
 const Index = () => {
@@ -11,7 +11,7 @@ const Index = () => {
       title: 'Safety-Critical Systems',
       subtitle: '"Where reliability isn\'t optional"',
       description: '15 years building aviation systems where failure meant losing lives, not just data. Led industry contributions to U.S. Army DVE-M research program on pilot cueing systems, contributing to published research on human-computer interaction in safety-critical environments.',
-      image: safetySystems,
+      image: "/lovable-uploads/57c6ed22-7f53-4fdf-b58f-f9e8af65d6ac.png",
       link: '/story'
     },
     {
