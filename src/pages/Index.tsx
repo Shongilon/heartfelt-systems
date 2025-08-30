@@ -80,7 +80,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {storyCards.map((card) => (
               <div key={card.id} className="research-card">
-                <div className="aspect-[16/10] mb-6 rounded-md overflow-hidden">
+                <div className="aspect-video mb-6 rounded-md overflow-hidden">
                   <img 
                     src={card.image} 
                     alt={card.title}
