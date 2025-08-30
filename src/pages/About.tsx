@@ -10,30 +10,23 @@ const About = () => {
     const section = searchParams.get('section');
     if (section === 'safety-critical') {
       setExpandedPeriod('2008-2018');
-      // Scroll to the section after ensuring it's expanded and rendered
+      
+      // Wait for expansion animation to complete, then scroll
       setTimeout(() => {
         if (safetyCriticalRef.current) {
-          // Get the title element for more precise positioning
+          // Find the title element within the safety critical section
           const titleElement = safetyCriticalRef.current.querySelector('h3');
-          const targetElement = titleElement || safetyCriticalRef.current;
-          
-          // Use scrollIntoView with proper offset for sticky header
-          targetElement.scrollIntoView({ 
-            behavior: 'smooth', 
-            block: 'start' 
-          });
-          
-          // Fine-tune position to account for header
-          setTimeout(() => {
-            const currentScrollY = window.scrollY;
-            const headerHeight = 80; // Account for navigation + some padding
-            window.scrollTo({ 
-              top: currentScrollY - headerHeight, 
-              behavior: 'smooth' 
+          if (titleElement) {
+            const titleTop = titleElement.getBoundingClientRect().top + window.scrollY;
+            const headerOffset = 80; // Navigation height + padding
+            
+            window.scrollTo({
+              top: titleTop - headerOffset,
+              behavior: 'smooth'
             });
-          }, 50);
+          }
         }
-      }, 300); // Increased timeout to allow full expansion
+      }, 400); // Longer delay to ensure expansion completes
     }
   }, [searchParams]);
 
