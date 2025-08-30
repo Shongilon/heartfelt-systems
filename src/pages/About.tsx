@@ -5,39 +5,36 @@ const About = () => {
 
   const timelinePeriods = [
     {
-      id: '2008-2015',
+      id: '2008-2018',
       title: 'Safety-Critical Systems',
-      subtitle: '2008-2015',
+      subtitle: '2008-2018',
       description: '"I thought perfect code made perfect systems—until users broke every assumption"',
       details: [
-        "Core aviation systems development",
-        "Foundation in reliability engineering",
-        "Built systems where failure wasn't an option",
-        "Learned that humans are the most unpredictable component"
+        "Led development of mission-critical aviation systems",
+        "Established expertise in DO-178C and safety-critical standards",
+        "Discovered the gap between technical perfection and human reality"
       ]
     },
     {
-      id: '2015-2020',
-      title: 'Human-Centered Awakening',
-      subtitle: '2015-2020',
-      description: '"Developing systems that monitor human physiological state taught me that the most critical variable isn\'t the technology - it\'s understanding the human using it."',
+      id: '2015-2023',
+      title: 'Government Research Collaboration',
+      subtitle: '2015-2023',
+      description: '"Understanding human physiology and perception became more critical than perfecting the technology"',
       details: [
-        "Canary physiological monitoring system (2015-2017) - U.S. Navy evaluation",
-        "DVE-M pilot cueing research (2019-2021) - U.S. Army collaboration",
-        "NVIDIA advanced systems (2022-2023)",
-        "Shifted focus from pure technical performance to human-centered design"
+        "Canary physiological monitoring evaluation (U.S. Navy, 2015-2017)",
+        "DVE-M pilot cueing systems research (U.S. Army, 2019-2021)",
+        "Advanced AI infrastructure development (NVIDIA, 2022-2023)"
       ]
     },
     {
       id: '2023-present',
       title: 'Emotion AI Research',
       subtitle: '2023-Present',
-      description: '"From monitoring pilot stress to recognizing human emotions - the same principles of human-centered design apply."',
+      description: '"From monitoring pilot stress to recognizing human emotions—the same human-centered principles guide both"',
       details: [
-        "REACTU.io technical leadership",
-        "Healthcare-focused emotion recognition",
-        "Building AI that understands human emotional states",
-        "Developing privacy-first physiological emotion detection"
+        "Technical leadership of real-time physiological signal processing",
+        "Neural network development for multimodal emotion recognition",
+        "Privacy-preserving healthcare AI system architecture"
       ]
     }
   ];
