@@ -280,7 +280,7 @@ const Research = () => {
             </div>
           </div>
           
-          <div className="research-card bg-primary/10">
+          <div className="research-card bg-primary/10 text-center">
             <h3 className="text-2xl text-primary mb-6">Research Philosophy</h3>
             <p className="text-lg mb-4 text-muted-foreground">I don't want to just publish papers. I want to build systems that actually reach the families who need them most.</p>
             <p className="text-muted-foreground mb-8">This means designing for reliability, accessibility, and human dignity from the ground up. My engineering background ensures research can transition from lab prototypes to real-world clinical systems.</p>
