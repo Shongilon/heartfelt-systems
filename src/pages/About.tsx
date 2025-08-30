@@ -8,33 +8,36 @@ const About = () => {
       id: '2008-2015',
       title: 'Safety-Critical Systems',
       subtitle: '2008-2015',
-      description: '"I thought perfect code meant bulletproof systems. Then I met users who broke every assumption."',
+      description: '"I thought perfect code made perfect systems—until users broke every assumption"',
       details: [
-        "Built aviation systems where failure wasn't an option",
-        "Learned that humans are the most unpredictable component",
-        "Discovered the gap between technical perfection and human reality"
+        "Core aviation systems development",
+        "Foundation in reliability engineering",
+        "Built systems where failure wasn't an option",
+        "Learned that humans are the most unpredictable component"
       ]
     },
     {
       id: '2015-2020',
       title: 'Human-Centered Awakening',
       subtitle: '2015-2020',
-      description: '"Technology should serve people, not missions."',
+      description: '"Developing systems that monitor human physiological state taught me that the most critical variable isn\'t the technology - it\'s understanding the human using it."',
       details: [
-        "Shifted from aerospace to civilian applications",
-        "Started focusing on user experience in high-stress environments",
-        "Realized that the best interface adapts to human limitations"
+        "Canary physiological monitoring system (2015-2017) - U.S. Navy evaluation",
+        "DVE-M pilot cueing research (2019-2021) - U.S. Army collaboration",
+        "NVIDIA advanced systems (2022-2023)",
+        "Shifted focus from pure technical performance to human-centered design"
       ]
     },
     {
-      id: '2020-2025',
+      id: '2023-present',
       title: 'Emotion AI Research',
-      subtitle: '2020-2025',
-      description: '"What if your heartbeat could be a language?"',
+      subtitle: '2023-Present',
+      description: '"From monitoring pilot stress to recognizing human emotions - the same principles of human-centered design apply."',
       details: [
-        "Founded research into emotion recognition technology",
-        "Built REACTU for ALS communication assistance",
-        "Developed privacy-first physiological emotion detection"
+        "REACTU.io technical leadership",
+        "Healthcare-focused emotion recognition",
+        "Building AI that understands human emotional states",
+        "Developing privacy-first physiological emotion detection"
       ]
     }
   ];
