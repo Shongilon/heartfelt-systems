@@ -8,8 +8,8 @@ const Resume = () => {
           Emotion AI Researcher & Systems Engineer
         </div>
         <div className="text-muted-foreground">
-          <a href="mailto:ktzfam@gmail.com" className="text-primary hover:underline">
-            ktzfam@gmail.com
+          <a href="mailto:itai.katz@reactu.io" className="text-primary hover:underline">
+            itai.katz@reactu.io
           </a>
           {" • "}
           <a href="tel:+972549991771" className="text-primary hover:underline">
