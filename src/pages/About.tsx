@@ -13,9 +13,11 @@ const About = () => {
       // Scroll to the section after a short delay to ensure it's rendered
       setTimeout(() => {
         if (safetyCriticalRef.current) {
-          safetyCriticalRef.current.scrollIntoView({ 
-            behavior: 'smooth', 
-            block: 'start' 
+          const headerHeight = 100; // Account for sticky header
+          const elementPosition = safetyCriticalRef.current.offsetTop - headerHeight;
+          window.scrollTo({ 
+            top: elementPosition, 
+            behavior: 'smooth' 
           });
         }
       }, 100);
