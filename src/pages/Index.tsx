@@ -10,7 +10,7 @@ const Index = () => {
       id: 'safety-critical',
       title: 'Safety-Critical Systems',
       subtitle: '"Where reliability isn\'t optional"',
-      description: '15 years building aviation systems where failure meant losing lives, not just data. Led industry contributions to U.S. Army DVE-M research program on pilot cueing systems, contributing to published research on human-computer interaction in safety-critical environments.',
+      description: '15 years building aviation systems where failure meant losing lives, not just data. Led industry contributions to aviation research on degraded visual environments and pilot cueing systems, resulting in published work on human-computer interaction in safety-critical environments.',
       image: "/lovable-uploads/57c6ed22-7f53-4fdf-b58f-f9e8af65d6ac.png",
       link: '/story'
     },
