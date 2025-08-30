@@ -45,7 +45,7 @@ const Index = () => {
           </h1>
 
           <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
-            15 years building technology that couldn't fail. Now building technology that can understand human emotion through voice analysis.
+            15 years building technology that couldn't fail. Now building technology that understands human emotion to enhance communication and support those who need it most.
           </p>
 
           <div className="mb-12 flex justify-center">
