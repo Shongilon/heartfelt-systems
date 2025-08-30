@@ -11,22 +11,24 @@ const About = () => {
     if (section === 'safety-critical') {
       setExpandedPeriod('2008-2018');
       
-      // Wait for expansion animation to complete, then scroll
+      // Wait for DOM updates and expansion animation
       setTimeout(() => {
         if (safetyCriticalRef.current) {
-          // Find the title element within the safety critical section
-          const titleElement = safetyCriticalRef.current.querySelector('h3');
-          if (titleElement) {
-            const titleTop = titleElement.getBoundingClientRect().top + window.scrollY;
-            const headerOffset = 80; // Navigation height + padding
-            
-            window.scrollTo({
-              top: titleTop - headerOffset,
-              behavior: 'smooth'
-            });
-          }
+          // Get the exact position of the title
+          const rect = safetyCriticalRef.current.getBoundingClientRect();
+          const currentScrollY = window.scrollY;
+          const absoluteTop = rect.top + currentScrollY;
+          
+          // Navigation header is approximately 72px (py-6 = 48px + some buffer)
+          const navigationHeight = 72;
+          
+          // Scroll so the title appears right below the navigation
+          window.scrollTo({
+            top: absoluteTop - navigationHeight,
+            behavior: 'smooth'
+          });
         }
-      }, 400); // Longer delay to ensure expansion completes
+      }, 500); // Longer delay to ensure expansion is complete
     }
   }, [searchParams]);
 
