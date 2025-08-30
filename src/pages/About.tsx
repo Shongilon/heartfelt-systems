@@ -43,6 +43,12 @@ const About = () => {
         "Integrated RiskMinOFN algorithms and SLAD sensor fusion systems to ensure reliability in life-critical flight environments",
         "Established expertise in safety-critical software where interface failures directly impact pilot survival",
         "",
+        "**Research Contributions**",
+        "",
+        "Technical innovations: Timing-constrained architectures, adaptive risk-minimization algorithms, real-time sensor fusion processing",
+        "Human factors insights: Cognitive load reduction methodologies, multimodal cueing effectiveness in high-stress environments",
+        "Research impact: Peer-reviewed publications, technology transition to operational aircraft programs",
+        "",
         "**Degraded Visual Environment Research (2010-2018)**",
         "Directed technical development for multi-year research program on pilot cueing systems for low-visibility rotorcraft operations.",
         "",
@@ -50,13 +56,12 @@ const About = () => {
         "Developed adaptive risk assessment algorithms that adjusted warnings based on flight context to prevent false alarms while maintaining safety margins",
         "Conducted validation experiments demonstrating improved pilot situational awareness in brownout, fog, and night flight conditions",
         "",
-        "**Research Contributions**",
+        "**Key Publication**",
         "",
-        "Technical innovations: Timing-constrained architectures, adaptive risk-minimization algorithms, real-time sensor fusion processing",
-        "Human factors insights: Cognitive load reduction methodologies, multimodal cueing effectiveness in high-stress environments",
-        "Research impact: Peer-reviewed publications, technology transition to operational aircraft programs",
+        "[The Design of Pilot Cueing for the Degraded Visual Environment Mitigation (DVE-M) System for Rotorcraft](https://www.researchgate.net/publication/352108739_The_Design_of_Pilot_Cueing_for_the_Degraded_Visual_Environment_Mitigation_DVE-M_System_for_Rotorcraft)",
+        "Vertical Flight Society Forum, 2021 - This peer-reviewed research established foundational principles for human-centered safety systems in extreme environments.",
         "",
-        "Published Research: [The Design of Pilot Cueing for the Degraded Visual Environment Mitigation (DVE-M) System for Rotorcraft](https://www.researchgate.net/publication/352108739_The_Design_of_Pilot_Cueing_for_the_Degraded_Visual_Environment_Mitigation_DVE-M_System_for_Rotorcraft) - Vertical Flight Society Forum, 2021"
+        "This foundational work in human-centered safety systems—where understanding pilot cognitive load and stress response was critical to survival—established both the technical framework and philosophical approach that drives my current emotion AI research. The same principles that guided life-critical aviation interfaces now inform how we design technology to understand and respond to human emotional states."
       ]
     },
     {
