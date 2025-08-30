@@ -56,7 +56,7 @@ const About = () => {
         "Human factors insights: Cognitive load reduction methodologies, multimodal cueing effectiveness in high-stress environments",
         "Research impact: Peer-reviewed publications, technology transition to operational aircraft programs",
         "",
-        "Published Research: \"The Design of Pilot Cueing for the Degraded Visual Environment Mitigation (DVE-M) System for Rotorcraft\" - Vertical Flight Society Forum, 2021"
+        "Published Research: [The Design of Pilot Cueing for the Degraded Visual Environment Mitigation (DVE-M) System for Rotorcraft](https://www.researchgate.net/publication/352108739_The_Design_of_Pilot_Cueing_for_the_Degraded_Visual_Environment_Mitigation_DVE-M_System_for_Rotorcraft) - Vertical Flight Society Forum, 2021"
       ]
     },
     {
@@ -142,6 +142,32 @@ const About = () => {
                           <li key={i} className="flex items-start gap-3">
                             <div className="w-2 h-2 bg-secondary rounded-full mt-3 flex-shrink-0" />
                             <h5 className="text-foreground font-semibold">{boldText}</h5>
+                          </li>
+                        );
+                      }
+                      
+                      // Handle markdown links
+                      const linkMatch = detail.match(/\[([^\]]+)\]\(([^)]+)\)/);
+                      if (linkMatch) {
+                        const [fullMatch, linkText, url] = linkMatch;
+                        const beforeLink = detail.substring(0, detail.indexOf(fullMatch));
+                        const afterLink = detail.substring(detail.indexOf(fullMatch) + fullMatch.length);
+                        
+                        return (
+                          <li key={i} className="flex items-start gap-3">
+                            <div className="w-2 h-2 bg-secondary rounded-full mt-3 flex-shrink-0" />
+                            <p className="text-muted-foreground">
+                              {beforeLink}
+                              <a 
+                                href={url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-primary hover:text-primary/80 transition-colors underline"
+                              >
+                                {linkText}
+                              </a>
+                              {afterLink}
+                            </p>
                           </li>
                         );
                       }
