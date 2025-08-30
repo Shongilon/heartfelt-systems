@@ -1,7 +1,16 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
 const About = () => {
+  const [searchParams] = useSearchParams();
   const [expandedPeriod, setExpandedPeriod] = useState<string | null>(null);
+
+  useEffect(() => {
+    const section = searchParams.get('section');
+    if (section === 'safety-critical') {
+      setExpandedPeriod('2008-2018');
+    }
+  }, [searchParams]);
 
   const timelinePeriods = [
     {

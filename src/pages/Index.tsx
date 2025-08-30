@@ -12,7 +12,7 @@ const Index = () => {
       subtitle: '"Where reliability isn\'t optional"',
       description: '15 years building aviation systems where failure meant losing lives, not just data. Led industry contributions to aviation research on degraded visual environments and pilot cueing systems, resulting in published work on human-computer interaction in safety-critical environments.',
       image: "/lovable-uploads/57c6ed22-7f53-4fdf-b58f-f9e8af65d6ac.png",
-      link: '/story'
+      link: '/about?section=safety-critical'
     },
     {
       id: 'human-centered',
