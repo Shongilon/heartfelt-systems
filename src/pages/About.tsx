@@ -10,17 +10,30 @@ const About = () => {
     const section = searchParams.get('section');
     if (section === 'safety-critical') {
       setExpandedPeriod('2008-2018');
-      // Scroll to the section after a short delay to ensure it's rendered
+      // Scroll to the section after ensuring it's expanded and rendered
       setTimeout(() => {
         if (safetyCriticalRef.current) {
-          const headerHeight = 100; // Account for sticky header
-          const elementPosition = safetyCriticalRef.current.offsetTop - headerHeight;
-          window.scrollTo({ 
-            top: elementPosition, 
-            behavior: 'smooth' 
+          // Get the title element for more precise positioning
+          const titleElement = safetyCriticalRef.current.querySelector('h3');
+          const targetElement = titleElement || safetyCriticalRef.current;
+          
+          // Use scrollIntoView with proper offset for sticky header
+          targetElement.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
           });
+          
+          // Fine-tune position to account for header
+          setTimeout(() => {
+            const currentScrollY = window.scrollY;
+            const headerHeight = 80; // Account for navigation + some padding
+            window.scrollTo({ 
+              top: currentScrollY - headerHeight, 
+              behavior: 'smooth' 
+            });
+          }, 50);
         }
-      }, 100);
+      }, 300); // Increased timeout to allow full expansion
     }
   }, [searchParams]);
 
