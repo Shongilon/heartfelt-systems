@@ -1,14 +1,24 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 const About = () => {
   const [searchParams] = useSearchParams();
   const [expandedPeriod, setExpandedPeriod] = useState<string | null>(null);
+  const safetyCriticalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const section = searchParams.get('section');
     if (section === 'safety-critical') {
       setExpandedPeriod('2008-2018');
+      // Scroll to the section after a short delay to ensure it's rendered
+      setTimeout(() => {
+        if (safetyCriticalRef.current) {
+          safetyCriticalRef.current.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+          });
+        }
+      }, 100);
     }
   }, [searchParams]);
 
@@ -64,7 +74,11 @@ const About = () => {
         {/* Timeline */}
         <div className="space-y-16 mb-20">
           {timelinePeriods.map((period, index) => (
-            <div key={period.id} className="research-card">
+            <div 
+              key={period.id} 
+              className="research-card"
+              ref={period.id === '2008-2018' ? safetyCriticalRef : null}
+            >
               <div className="mb-6">
                 <h3 className="text-foreground mb-3">
                   {period.title}
